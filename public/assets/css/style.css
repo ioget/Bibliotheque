@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Roboto";
+}
+
+/* npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+ */
+
+/* npx tailwindcss -i ./style.css -o ./dist/style.css --watch
+    */
+
+
+/* npx tailwindcss -i ./public/assets/css/style.css -o ./public/assets/css/dist/style.css --watch */
+
