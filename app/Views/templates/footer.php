@@ -1,7 +1,7 @@
-<footer>
+<!--<footer>
     footer
     <em>&copy; 2021</em>
-</footer>
+</footer> -->
 
 </body>
 

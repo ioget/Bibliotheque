@@ -63,6 +63,33 @@ abstract class BaseController extends Controller
 
     public $title = "Bibliothèque";
 
+    // good format du vardump() ! back-end helper
+    public function vd($v)
+    {
+        echo "<pre>";
+        var_dump($v);
+        echo "</pre>";
+    }
+
+    //  good format [ vardump() +  die() ] => die in dump ! back-end helper
+    public function dd($v)
+    {
+        echo "<pre>";
+        var_dump($v);
+        echo "</pre>";
+        die();
+    }
+
+    public function isUsersConnect()
+    {
+       return  isset($_SESSION['users']) ? true : false;
+    }
+
+    public function isAdminConnect()
+    {
+        return  isset($_SESSION['admin']) ? true : false;
+    }
+
     // nouvelle fonction pour retourne la vue
     public function render ($file, $data = null , $module = 'pages/')
     {

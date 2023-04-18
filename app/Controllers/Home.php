@@ -9,7 +9,8 @@ class Home extends BaseController
     {
         helper('url');
         helper('html');
-        return $this->render('home');
+        $data['navLinkActive'] = 'home'; // link actif a mettre en couleur
+        return $this->render('home', $data);
         
     }
 }

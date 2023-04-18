@@ -20,7 +20,7 @@ class Pages extends BaseController
         }
 
         $data['title'] = ucfirst($page); // Capitalize the first letter
-
+        $data['navLinkActive'] = $page;  // link actif a mettre en couleur
         return $this->render($page, $data);
     }
 }

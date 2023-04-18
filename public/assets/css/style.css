@@ -15,3 +15,13 @@
 
 /* npx tailwindcss -i ./public/assets/css/style.css -o ./public/assets/css/dist/style.css --watch */
 
+.registed:hover .downdrop{
+    display: flex;
+
+}
+
+main
+{
+    margin-left: 40px;
+    margin-right: 40px;
+}

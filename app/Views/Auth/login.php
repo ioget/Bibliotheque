@@ -1,8 +1,19 @@
-<main class="flex justify-end items-center ">
+<?php /*
+$to = "mamakemrosly@gmail.com";
+$subject = "My subject";
+$txt = "Hello world!";
+$headers = "From: webmaster@example.com" . "\r\n" .
+"CC: somebodyelse@example.com";
+ini_set('SMTP', "server.com");
+ini_set('smtp_port', "50885");
+ini_set('sendmail_from', "mamakemrosly@gmail.com");
+mail($to,$subject,$txt,$headers); */
+?>
 
 
+<main class="   md:p-0  h-[70vh]  bg-no-repeat  ">
     <section class=" md:flex md:flex-row flex flex-col-reverse w-full h-full  px-8  justify-center items-center gap-y-8 -z-10 bg-transparent" style="background-image: url('/assets/img/download6.svg'); background-repeat:no-repeat;  ">
-        <form id="form" action="/dashboard" method="post" class=" z-20  bg-gray-50   flex flex-col p-4 rounded-lg gap-y-4  shadow-2xl  opacity-100  ">
+        <form id="form" action="/dashboard" method="post" class=" z-20  bg-gray-50 p-12 pt-2   flex flex-col rounded-lg gap-y-4  shadow-2xl  opacity-100  ">
 
             <?= csrf_field()  ?>
 
@@ -25,7 +36,7 @@
                     <label class="block text-gray-700 text-sm font-bold w-full " for="username">
                         Username:
                     </label>
-                    <input name="username" value="<?= set_value('username') ?>" class="shadow appearance-none border rounded  w-[200px]  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-2 focus:border-[#0316ff]" id="username" type="text" required>
+                    <input name="username" value="<?= set_value('username') ?>" class="shadow appearance-none border rounded   py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:shadow-lg " id="username" type="text" required>
                 </div>
                 <div class="  text-xs text-red-400  ">
                     <?= validation_show_error('username') ?>
@@ -38,7 +49,7 @@
                     <label class="block text-gray-700 text-sm font-bold w-full " for="password">
                         Password:
                     </label>
-                    <input name="password" value="" class="shadow  appearance-none border rounded w-[200px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline  focus:border-2 focus:border-[#0316ff] " id="password" type="password" required>
+                    <input name="password" value="" class="shadow  appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline  focus:shadow-lg " id="password" type="password" required>
                 </div>
                 <div class="  text-xs text-red-400  ">
                     <?= validation_show_error('password') ?>
@@ -47,13 +58,14 @@
 
             <div class="flex flex-col justify-end items-center gap-2 ">
 
-                <button class="bg-[#663300] hover:shadow-lg w-full hover:bg-[#0316ff] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                <button class="bg-[#663300] hover:shadow-lg w-full  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                     Log in
                 </button>
-                <a href=""><span class="text-xs hover:text-[#0316ff] italic text-neutral-500 ">Forget password</span></a>
+                <a href=""><span class="text-sm hover:text-[#144e93] italic text-neutral-500 ">Forget password</span></a>
             </div>
 
+   
+        </form>
 
     </section>
-    </form>
 </main>

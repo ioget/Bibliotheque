@@ -1,0 +1,12 @@
+CRITICAL - 2023-04-18 00:11:08 --> Call to undefined function set_value()
+in APPPATH\Views\Auth\studentsRegisted.php on line 30.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('Auth/studentsRegisted', [], true)
+ 4 APPPATH\Controllers\BaseController.php(87): view('Auth/studentsRegisted')
+ 5 APPPATH\Controllers\Users.php(27): App\Controllers\BaseController->render('studentsRegisted', [...], 'Auth/')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->studentsRegisted()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
