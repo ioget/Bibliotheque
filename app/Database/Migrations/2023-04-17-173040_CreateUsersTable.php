@@ -55,10 +55,16 @@ class CreateUsersTable extends Migration
             'type' => [
                 'type' => 'ENUM',
                 'constraint' => ['Enseignant', 'Etudiant']
-            ]
+            ],
+            'id_filiere' => [
+                'type' => 'INT',
+                'constraint' => 5,
+                'unsigned' => true
+            ],
         ]);
         $this->forge->addPrimaryKey('id_users');
         $this->forge->addForeignKey('id_niveau', 'niveau', 'id_niveau','CASCADE','CASCADE');
+        $this->forge->addForeignKey('id_filiere', 'filiere', 'id_filiere','CASCADE','CASCADE');
         $this->forge->createTable('users');
     }
 

@@ -17,8 +17,8 @@ class CreateNiveauTable extends Migration
                 'auto_increment' => true
             ],
             'libelle' => [
-                'type' => 'VARCHAR',
-                'constraint' => 255,
+                'type' => 'ENUM',
+                'constraint' => ['level1', 'level2','level3','master1','master2','phd']
             ],
             'id_users' => [
                 'type' => 'INT',

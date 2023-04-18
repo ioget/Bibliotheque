@@ -28,6 +28,8 @@ class CreateFiliereTable extends Migration
         $this->forge->addPrimaryKey('id_filiere');
         $this->forge->addForeignKey('id_departement', 'departement', 'id_departement');
         $this->forge->createTable('filiere');
+
+    
     }
 
     public function down()
