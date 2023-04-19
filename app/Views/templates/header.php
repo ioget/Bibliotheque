@@ -29,7 +29,6 @@
               <ul class=" flex gap-6 ">
                 <li class="nav-bar-item p-1  border-white border-b-[3px] hover:text-[#663300]  hover:border-[#663300] <?=  $data['navLinkActive'] === "home" ? "font-bold text-[#144e93]" : "" ?> ">    <a href="/home">Home</a></li>
                 <li class="nav-bar-item p-1  border-white border-b-[3px] hover:text-[#663300]  hover:border-[#663300] <?=  $data['navLinkActive'] === "about" ? "font-bold text-[#144e93]" : "" ?>">    <a href="/about">About us</a></li>
-                <li class="nav-bar-item p-1  border-white border-b-[3px] hover:text-[#663300]  hover:border-[#663300] <?=  $data['navLinkActive'] === "contact" ? "font-bold text-[#144e93]" : "" ?>">  <a href="">Contact us </a></li>
                 <li class="nav-bar-item p-1 registed  border-white border-b-[3px] hover:text-[#663300]  hover:border-[#663300] <?=  $data['navLinkActive'] === "registed" ? "font-bold text-[#144e93]" : "" ?> flex gap-x-1 "> 
                     <a href="" class="">Registed  </a>
                     <img src="/assets/img/icons/chevron-down-outline.svg" width="12px" alt="" srcset="">
