@@ -21,4 +21,14 @@ class Admin extends BaseController
         $data['navLinkActive'] = 'admin'; // link actif a mettre en couleur
         return $this->render('login', $data, 'Auth/');
     }
+
+    public function dashboard()
+    {
+        helper('url');
+        helper('html');
+        helper('form');
+
+        $data['navLinkActive'] = 'admin';
+        return $this->render('dashboard', $data, 'Admin/','templates/headerAdmin');
+    }
 }

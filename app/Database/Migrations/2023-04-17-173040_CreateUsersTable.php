@@ -61,6 +61,10 @@ class CreateUsersTable extends Migration
                 'constraint' => 5,
                 'unsigned' => true
             ],
+            'point' => [
+                'type' => 'INT',
+                'constraint' => 5,
+            ],
         ]);
         $this->forge->addPrimaryKey('id_users');
         $this->forge->addForeignKey('id_niveau', 'niveau', 'id_niveau','CASCADE','CASCADE');

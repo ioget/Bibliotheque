@@ -91,10 +91,14 @@ abstract class BaseController extends Controller
     }
 
     // nouvelle fonction pour retourne la vue
-    public function render ($file, $data = null , $module = 'pages/')
+    public function render ($file, $data = null , $module = 'pages/' , $header ='templates/header' , $footer = 'templates/footer')
     {
-        return view('templates/header',['title' => $this->title , 'data' => $data ])
+        return view($header,['title' => $this->title , 'data' => $data ])
         . view($module . $file)
-        . view('templates/footer');
+        . view($footer);
     }
+
+  
+    
+    
 }
