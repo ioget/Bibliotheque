@@ -11,7 +11,8 @@
                 <p class=" text-neutral-500">Because <q class=" font-bold">The mind that does not read loses weight like the body that does not eat</q> <span class="text-neutral-700 ">(Victor Hugo)</span> consult the available books for free.</p>
             </div>
 
-            <a  href="../consult" class="border p-4 w-fit text-white flex items-center gap-x-1 hover:bg-[#144e99] hover:shadow-2xl hover:font-bold   bg-[#144e93]  rounded-3xl ">
+            <a  href="../consult" class="border p-4 w-fit text-white flex items-center gap-x-1 hover:bg-[#144e99] hover:shadow-2xl hover:font-bold     rounded-3xl " style="background: rgb(150,132,244);
+background: linear-gradient(90deg, rgba(150,132,244,1) 0%, rgba(134,170,244,1) 31%, rgba(163,227,227,1) 100%);">
                 <p> Consult available books</p>
                 <span><img src="/assets/img/icons/arrow-forward-outline.svg" width="18" alt="" srcset=""></span>
             </a>

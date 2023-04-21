@@ -65,6 +65,9 @@ class CreateUsersTable extends Migration
                 'type' => 'INT',
                 'constraint' => 5,
             ],
+            'create_at' => [
+                'type' => 'DATETIME',
+            ],
         ]);
         $this->forge->addPrimaryKey('id_users');
         $this->forge->addForeignKey('id_niveau', 'niveau', 'id_niveau','CASCADE','CASCADE');
