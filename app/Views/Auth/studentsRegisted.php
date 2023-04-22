@@ -56,7 +56,7 @@ background: linear-gradient(90deg, rgba(150,132,244,1) 0%, rgba(134,170,244,1) 3
                         <label class="block text-gray-700 text-sm font-bold w-full " for="fristname">
                             Frist name:
                         </label>
-                        <input name="fristname" value="<?= set_value('fristname') ?>" class="shadow focus:border-[#144e93] appearance-none border rounded   py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:shadow-lg " id="fristname" type="text" required>
+                        <input name="fristname" value="<?= set_value('fristname') ?>" class="shadow  focus:border-[#144e93] appearance-none  rounded   py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:shadow-lg " id="fristname" type="text" required>
                     </div>
                     <div class="  text-xs text-red-400  ">
                         <?= validation_show_error('fristname') ?>

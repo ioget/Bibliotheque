@@ -32,9 +32,23 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.  news/
-$routes->get('/', 'Home::index');
+$routes->get('/', 'Home::index'); //  
+
+//$routes->post('/api/registrationpermonth', 'ApiController::RegistrationPerMonth');
+$routes->get('/api/stats', 'ApiController::stats');
+
+/*
+$routes->group('api', function($routes){
+     $routes->group('stats',function($routes){
+            $routes->get("registed", "ApiController::RegistrationPerMonth");
+     });
+});
+
+*/
 $routes->match(['get', 'post'],'/dashboard', 'Admin::index');
-$routes->get('/dash', 'Admin::dashboard');
+$routes->get('/dash', 'Admin::dashboard'); 
+$routes->get('/dash/books/', 'Admin::books'); 
+$routes->get('/dash/members/(:alpha)', 'Admin::members/$1');
 $routes->match(['get', 'post'],'/teachers/registed', 'Users::teachersRegisted');
 $routes->match(['get', 'post'],'/students/registed', 'Users::studentsRegisted');
 $routes->get('(:segment)', [Pages::class, 'index']);

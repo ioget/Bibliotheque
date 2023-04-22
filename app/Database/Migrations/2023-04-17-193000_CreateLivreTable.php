@@ -30,7 +30,10 @@ class CreateLivreTable extends Migration
                 'type' => 'INT',
                 'constraint' => 5,
             ],
-            
+            'langue' => [
+                'type' => 'VARCHAR',
+                'constraint' => 30,
+            ],        
        
             'id_categorie' => [
                 'type' => 'INT',

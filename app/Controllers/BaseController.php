@@ -82,7 +82,7 @@ abstract class BaseController extends Controller
 
     public function isUsersConnect()
     {
-       return  isset($_SESSION['users']) ? true : false;
+       return  isset($_SESSION['user']) ? true : false;
     }
 
     public function isAdminConnect()

@@ -5,7 +5,7 @@
 * {
     font-family: "Roboto";
    /* box-sizing: border-box;
-    border: 1px solid black;*/
+    border: 1px solid black; */
 }
 
 /* npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch

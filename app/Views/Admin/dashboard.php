@@ -105,7 +105,7 @@
         </div>
     </div>
 
-    <div class=" rounded-xl shadow-xl mt-5 bg-gray-100 p-5">
+    <div class=" rounded-xl  mt-5 bg-gray-100 p-5">
 
         <div class="flex justify-end">
 
@@ -113,28 +113,27 @@
                 <div>
                     <label for="month" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Month</label>
                     <select id="month" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                        <option selected>January</option>
-                        <option value="US">February</option>
-                        <option value="CA">March</option>
-                        <option value="FR">April</option>
-                        <option value="DE">May</option>
-                        <option value="US">June</option>
-                        <option value="CA">July</option>
-                        <option value="FR">April</option>
-                        <option value="DE">August</option>
-                        <option value="US">September</option>
-                        <option value="CA">October</option>
-                        <option value="FR">November</option>
-                        <option value="DE">December</option>
+                        <option value="1" selected>January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="9">August</option>
+                        <option value="10">September</option>
+                        <option value="11">October</option>
+                        <option value="12">November</option>
+                        <option value="13">December</option>
                     </select>
                 </div>
                 <div>
                     <label for="year" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Year</label>
                     <select id="year" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                        <option selected>2023</option>
-                        <option selected>2024</option>
-                        <option selected>2025</option>
-                        <option selected>2026</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
                       
                     </select>
                 </div>
@@ -192,7 +191,7 @@
     // ['student' => 15, 'teacher' => 23, 'members' => 38, "borrowBook" => 32, "notReturnBook" => 5, 'allBook' => 243]
     window.addEventListener('load', function(e) {
         var data = <?php echo json_encode($data['graph']); ?>;
-        var stats = <?php echo json_encode([['name' => 'student',  'value' => 15], ['name' => 'teacher', 'value' => 23], ['name' => 'members', 'value' => 38], ['name' => 'borrowBook', 'value' => 32], ['name' => 'notReturnBook', 'value' => 5], ['name' => 'allBook', 'value' => 240],]); ?>;
+        var stats = <?php echo json_encode([['name' => 'student',  'value' => 15], ['name' => 'teacher', 'value' => 23], ['name' => 'members', 'value' => 38], ['name' => 'borrowBook', 'value' => 32], ['name' => 'notReturnBook', 'value' => 5], ['name' => 'allBook', 'value' => 243],]); ?>;
 
 
 
@@ -246,12 +245,12 @@
                 labels: [
                     'Roman',
                     'Historique',
-                    'anime',
+                    'Anime',
                     'Poeme'
                 ],
                 datasets: [{
                     label: 'Most read',
-                    data: [10, 50, 25, 15],
+                    data: [18, 42, 25, 15],
                     backgroundColor: [
                         'rgb(255, 99, 132)',
                         'rgb(54, 162, 235)',
@@ -300,9 +299,7 @@
             }).play();
         }
 
-        let overlay = this.document.querySelector(".overlay");
 
-        overlay.classList.toggle("hidden")
 
 
         stats.forEach(s => {
