@@ -35,7 +35,8 @@ $routes->set404Override();
 $routes->get('/', 'Home::index'); //  
 
 //$routes->post('/api/registrationpermonth', 'ApiController::RegistrationPerMonth');
-$routes->get('/api/stats', 'ApiController::stats');
+
+$routes->get('/api/registration/(:alpha)', 'ApiController::registration/$1');
 
 /*
 $routes->group('api', function($routes){
@@ -48,6 +49,8 @@ $routes->group('api', function($routes){
 $routes->match(['get', 'post'],'/dashboard', 'Admin::index');
 $routes->get('/dash', 'Admin::dashboard'); 
 $routes->get('/dash/books/', 'Admin::books'); 
+$routes->get('/dash/logout', 'Admin::logout'); 
+$routes->get('/dash/admin', 'Admin::admin');
 $routes->get('/dash/members/(:alpha)', 'Admin::members/$1');
 $routes->match(['get', 'post'],'/teachers/registed', 'Users::teachersRegisted');
 $routes->match(['get', 'post'],'/students/registed', 'Users::studentsRegisted');

@@ -1,0 +1,623 @@
+[
+  {
+    "name": "Albanais"
+  },
+  {
+    "name": "Allemand"
+  },
+  {
+    "name": "Afrikaans"
+  },
+  {
+    "name": "Araona"
+  },
+  {
+    "name": "Azéri"
+  },
+  {
+    "name": "Amazigh"
+  },
+  {
+    "name": "Arménien"
+  },
+  {
+    "name": "Aymara"
+  },
+  {
+    "name": "Anglais"
+  },
+  {
+    "name": "Arabe"
+  },
+  {
+    "name": "Bengali"
+  },
+  {
+    "name": "Bulgare"
+  },
+  {
+    "name": "Bésiro"
+  },
+  {
+    "name": "Bichelamar"
+  },
+  {
+    "name": "Biélorusse"
+  },
+  {
+    "name": "Birman"
+  },
+  {
+    "name": "Catalan"
+  },
+  {
+    "name": "Coréen"
+  },
+  {
+    "name": "Croate"
+  },
+  {
+    "name": "Cambodgien"
+  },
+  {
+    "name": "Chinois"
+  },
+  {
+    "name": "Danois"
+  },
+  {
+    "name": "Espagnol"
+  },
+  {
+    "name": "Finnois"
+  },
+  {
+    "name": "Français"
+  },
+  {
+    "name": "Japonais"
+  },
+  {
+    "name": "Portugais"
+  },
+  {
+    "name": "Russe"
+  },
+  {
+    "name": "Guarani"
+  },
+  {
+    "name": "Grec"
+  },
+  {
+    "name": "Hongrois"
+  },
+  {
+    "name": "Italien"
+  },
+  {
+    "name": "Kikongo"
+  },
+  {
+    "name": "Kiswahili"
+  },
+  {
+    "name": "Lingala"
+  },
+  {
+    "name": "Malais"
+  },
+  {
+    "name": "Mongol"
+  },
+  {
+    "name": "Néerlandais"
+  },
+  {
+    "name": "Occitan"
+  },
+  {
+    "name": "Ourdou"
+  },
+  {
+    "name": "Persan"
+  },
+  {
+    "name": "Quechua"
+  },
+  {
+    "name": "Roumain"
+  },
+  {
+    "name": "Samoan"
+  },
+  {
+    "name": "Serbe"
+  },
+  {
+    "name": "Sesotho"
+  },
+  {
+    "name": "Slovaque"
+  },
+  {
+    "name": "Slovène"
+  },
+  {
+    "name": "Suédois"
+  },
+  {
+    "name": "Tamoul"
+  },
+  {
+    "name": "Turc"
+  },
+  {
+    "name": "Canichana"
+  },
+  {
+    "name": "Cavineña"
+  },
+  {
+    "name": "Cayubaba"
+  },
+  {
+    "name": "Chácobo"
+  },
+  {
+    "name": "Chichewa"
+  },
+  {
+    "name": "Chimane"
+  },
+  {
+    "name": "Créole de Guinée-Bissau"
+  },
+  {
+    "name": "Créole haïtien"
+  },
+  {
+    "name": "Créole seychellois"
+  },
+  {
+    "name": "Divehi"
+  },
+  {
+    "name": "Dzongkha"
+  },
+  {
+    "name": "Ese 'ejja"
+  },
+  {
+    "name": "Estonien"
+  },
+  {
+    "name": "Éwé"
+  },
+  {
+    "name": "Fidjien"
+  },
+  {
+    "name": "Filipino"
+  },
+  {
+    "name": "Géorgien"
+  },
+  {
+    "name": "Gilbertin"
+  },
+  {
+    "name": "Guarasu'we"
+  },
+  {
+    "name": "Guarayu"
+  },
+  {
+    "name": "Hébreu"
+  },
+  {
+    "name": "Hindi"
+  },
+  {
+    "name": "Hindi des Fidji"
+  },
+  {
+    "name": "Hiri motu"
+  },
+  {
+    "name": "Indonésien"
+  },
+  {
+    "name": "Irlandais"
+  },
+  {
+    "name": "Islandais"
+  },
+  {
+    "name": "Itonama"
+  },
+  {
+    "name": "Kallawaya"
+  },
+  {
+    "name": "Kabiyè"
+  },
+  {
+    "name": "Kazakh"
+  },
+  {
+    "name": "Khmer"
+  },
+  {
+    "name": "Kirghiz"
+  },
+  {
+    "name": "Kirundi"
+  },
+  {
+    "name": "Lao"
+  },
+  {
+    "name": "Néo-zélandaise"
+  },
+  {
+    "name": "Papouasienne"
+  },
+  {
+    "name": "Latin"
+  },
+  {
+    "name": "Leko"
+  },
+  {
+    "name": "Letton"
+  },
+  {
+    "name": "Lituanien"
+  },
+  {
+    "name": "Luxembourgeois"
+  },
+  {
+    "name": "Macédonien"
+  },
+  {
+    "name": "Machineri"
+  },
+  {
+    "name": "Malgache"
+  },
+  {
+    "name": "Maltais"
+  },
+  {
+    "name": "Maori"
+  },
+  {
+    "name": "Maori des Îles Cook"
+  },
+  {
+    "name": "Maropa"
+  },
+  {
+    "name": "Marshallais"
+  },
+  {
+    "name": "Mirandais"
+  },
+  {
+    "name": "Mojeño-Trinitario"
+  },
+  {
+    "name": "Mojeño-Ignaciano"
+  },
+  {
+    "name": "Monténégrin"
+  },
+  {
+    "name": "Moré"
+  },
+  {
+    "name": "Mosetén"
+  },
+  {
+    "name": "Movima"
+  },
+  {
+    "name": "Nauruan"
+  },
+  {
+    "name": "Ndébélé du Transvaal"
+  },
+  {
+    "name": "Népalais"
+  },
+  {
+    "name": "Norvégien"
+  },
+  {
+    "name": "Ouzbek"
+  },
+  {
+    "name": "Pacahuara"
+  },
+  {
+    "name": "Pachto"
+  },
+  {
+    "name": "Paluan"
+  },
+  {
+    "name": "Polonais"
+  },
+  {
+    "name": "Puquina"
+  },
+  {
+    "name": "Sango"
+  },
+  {
+    "name": "Shikomor"
+  },
+  {
+    "name": "Shona"
+  },
+  {
+    "name": "Shuar"
+  },
+  {
+    "name": "Sindebele"
+  },
+  {
+    "name": "Singhalais"
+  },
+  {
+    "name": "Sirionó"
+  },
+  {
+    "name": "Somali"
+  },
+  {
+    "name": "Sotho du Nord"
+  },
+  {
+    "name": "Sotho du Sud"
+  },
+  {
+    "name": "Tacana"
+  },
+  {
+    "name": "Tadjik"
+  },
+  {
+    "name": "Tamazight"
+  },
+  {
+    "name": "Tapiete"
+  },
+  {
+    "name": "Tchèque"
+  },
+  {
+    "name": "Tétoum"
+  },
+  {
+    "name": "Tigrinya"
+  },
+  {
+    "name": "Thaï"
+  },
+  {
+    "name": "Tok pisin"
+  },
+  {
+    "name": "Tongien"
+  },
+  {
+    "name": "Toromona"
+  },
+  {
+    "name": "Turkmène"
+  },
+  {
+    "name": "Tuvaluan"
+  },
+  {
+    "name": "Ukrainien"
+  },
+  {
+    "name": "Uru-Chipaya"
+  },
+  {
+    "name": "Vietnamien"
+  },
+  {
+    "name": "Wichi"
+  },
+  {
+    "name": "Yaminahua"
+  },
+  {
+    "name": "Yuki"
+  },
+  {
+    "name": "Yaracaré"
+  },
+  {
+    "name": "Zamuco"
+  },
+  {
+    "name": "Zoulou"
+  },
+  {
+    "name": "Adyguéen"
+  },
+  {
+    "name": "Agul"
+  },
+  {
+    "name": "Altaï"
+  },
+  {
+    "name": "Assamais"
+  },
+  {
+    "name": "Avar"
+  },
+  {
+    "name": "Bachkir"
+  },
+  {
+    "name": "Bas saxon"
+  },
+  {
+    "name": "Basque"
+  },
+  {
+    "name": "Bouriate"
+  },
+  {
+    "name": "Cantonais"
+  },
+  {
+    "name": "Carolinien"
+  },
+  {
+    "name": "Chamorro"
+  },
+  {
+    "name": "Darguine"
+  },
+  {
+    "name": "Erzya"
+  },
+  {
+    "name": "Galicien"
+  },
+  {
+    "name": "Gallois"
+  },
+  {
+    "name": "Gwich'in"
+  },
+  {
+    "name": "Hawaïen"
+  },
+  {
+    "name": "Iakoute"
+  },
+  {
+    "name": "Ingouche"
+  },
+  {
+    "name": "Inuinnaqtun"
+  },
+  {
+    "name": "Inuktitut"
+  },
+  {
+    "name": "Kabarde"
+  },
+  {
+    "name": "Kalmouk"
+  },
+  {
+    "name": "Karatchaï-balkar"
+  },
+  {
+    "name": "Khakasse"
+  },
+  {
+    "name": "Komi"
+  },
+  {
+    "name": "Koumyk"
+  },
+  {
+    "name": "Lak"
+  },
+  {
+    "name": "Lezghien"
+  },
+  {
+    "name": "Mannois"
+  },
+  {
+    "name": "Mari"
+  },
+  {
+    "name": "Moksa"
+  },
+  {
+    "name": "Nogaï"
+  },
+  {
+    "name": "Occitan (aranais)"
+  },
+  {
+    "name": "Ossète"
+  },
+  {
+    "name": "Oudmourte"
+  },
+  {
+    "name": "Ouïghour"
+  },
+  {
+    "name": "Romanche"
+  },
+  {
+    "name": "Routoul"
+  },
+  {
+    "name": "Ruthène"
+  },
+  {
+    "name": "Same"
+  },
+  {
+    "name": "Sorabe"
+  },
+  {
+    "name": "Swati"
+  },
+  {
+    "name": "Tabassaran"
+  },
+  {
+    "name": "Tat"
+  },
+  {
+    "name": "Tatare"
+  },
+  {
+    "name": "Tchétchène"
+  },
+  {
+    "name": "Tchouvache"
+  },
+  {
+    "name": "Tibétain"
+  },
+  {
+    "name": "Tobi"
+  },
+  {
+    "name": "Touvain"
+  },
+  {
+    "name": "Tsakhur"
+  },
+  {
+    "name": "Tsonga"
+  },
+  {
+    "name": "Tswana"
+  },
+  {
+    "name": "Venda"
+  },
+  {
+    "name": "Xhosa"
+  }
+]

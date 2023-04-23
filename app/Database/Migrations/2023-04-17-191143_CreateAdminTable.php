@@ -38,7 +38,9 @@ class CreateAdminTable extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => 255,
                 'unique' => true
-            ]
+            ],
+      
+            
         ]);
 
         $this->forge->addPrimaryKey('id_admin');

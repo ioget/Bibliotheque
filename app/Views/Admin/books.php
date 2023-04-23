@@ -15,7 +15,6 @@
             <div class="w-full flex gap-x-16   items-end">
 
                 <div class="w-[25%]">
-                    <label for="default" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Choose the category</label>
                     <select id="large" class="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-lg bg-neutral-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option value="all" selected>All category</option>
                         <option value="US">United States</option>
@@ -40,7 +39,7 @@
                     </div>
 
                     <div class=" h-[45px] -mt-8 ">
-                        <div data-modal-target="new-book" data-modal-toggle="new-book" title="Add book" class="text-white bg-neutral-50 cursor-pointer  hover:shadow-lg hover:bg-neutral-100 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        <div data-modal-target="new-book" data-modal-toggle="new-book" title="Create book" class="text-white bg-neutral-50 cursor-pointer  hover:shadow-lg hover:bg-neutral-100 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                             <img src="/assets/img/icons/add-circle-outline.svg" class=" scale-105" width="25" alt="" srcset="">
                         </div>
                     </div>
@@ -100,7 +99,7 @@
                         <span class="  w-1 h-5 bg-neutral-200  rounded-md "></span>
                         <img src="/assets/img/edit.svg" class=" hover:scale-105" width="18" alt="" srcset="">
                         <span class=" w-1 h-5 bg-neutral-200  rounded-md "></span>
-                        <img src="/assets/img/icons/trash-outline.svg"  class=" hover:scale-105" data-modal-target="popup-modal" data-modal-toggle="popup-modal"  width="18" alt="" srcset="">
+                        <img src="/assets/img/icons/trash-outline.svg" class=" hover:scale-105" data-modal-target="popup-modal" data-modal-toggle="popup-modal" width="18" alt="" srcset="">
 
                         <div data-popover id="popover" role="tooltip" class="absolute z-[60] invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
                             <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 z-[60] rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
@@ -140,7 +139,7 @@
                         <span class="  w-1 h-5 bg-neutral-200  rounded-md "></span>
                         <img src="/assets/img/edit.svg" class=" hover:scale-105" width="18" alt="" srcset="">
                         <span class=" w-1 h-5 bg-neutral-200  rounded-md "></span>
-                        <img src="/assets/img/icons/trash-outline.svg"  class=" hover:scale-105" data-modal-target="popup-modal" data-modal-toggle="popup-modal"  width="18" alt="" srcset="">
+                        <img src="/assets/img/icons/trash-outline.svg" class=" hover:scale-105" data-modal-target="popup-modal" data-modal-toggle="popup-modal" width="18" alt="" srcset="">
 
                         <div data-popover id="popover" role="tooltip" class="absolute z-[60] invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
                             <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 z-[60] rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
@@ -178,7 +177,7 @@
                         <span class="  w-1 h-5 bg-neutral-200  rounded-md "></span>
                         <img src="/assets/img/edit.svg" class=" hover:scale-105" width="18" alt="" srcset="">
                         <span class=" w-1 h-5 bg-neutral-200  rounded-md "></span>
-                        <img src="/assets/img/icons/trash-outline.svg"  class=" hover:scale-105" data-modal-target="popup-modal" data-modal-toggle="popup-modal"  width="18" alt="" srcset="">
+                        <img src="/assets/img/icons/trash-outline.svg" class=" hover:scale-105" data-modal-target="popup-modal" data-modal-toggle="popup-modal" width="18" alt="" srcset="">
 
                         <div data-popover id="popover" role="tooltip" class="absolute z-[60] invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
                             <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 z-[60] rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
@@ -217,7 +216,7 @@
                         <span class="  w-1 h-5 bg-neutral-200  rounded-md "></span>
                         <img src="/assets/img/edit.svg" class=" hover:scale-105" width="18" alt="" srcset="">
                         <span class=" w-1 h-5 bg-neutral-200  rounded-md "></span>
-                        <img src="/assets/img/icons/trash-outline.svg"  class=" hover:scale-105" data-modal-target="popup-modal" data-modal-toggle="popup-modal"  width="18" alt="" srcset="">
+                        <img src="/assets/img/icons/trash-outline.svg" class=" hover:scale-105" data-modal-target="popup-modal" data-modal-toggle="popup-modal" width="18" alt="" srcset="">
 
                         <div data-popover id="popover" role="tooltip" class="absolute z-[60] invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
                             <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 z-[60] rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
@@ -233,10 +232,10 @@
 
                 </tr>
 
-                
 
 
-                
+
+
 
 
             </tbody>
@@ -321,22 +320,66 @@
                         <div>
                             <label for="langue" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Language</label>
                             <select id="langue" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option selected>English</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="FR">France</option>
-                                <option value="DE">Germany</option>
+                                <?php
+                                $jsonFile = APPPATH . '../public/assets/js/language.json';
+                                $json = file_get_contents($jsonFile);
+                                $languages = json_decode($json, true);
+
+                                $i = -1;
+                                foreach ($languages as $language) :
+                                    $i++;
+                                ?>
+                                    <option value="<?= $i ?>" <?= $language['name'] === 'Anglais' ? "Selected" : "" ?>><?= $language['name'] ?></option>
+                                <?php endforeach ?>
                             </select>
                         </div>
 
                         <div>
                             <label for="categorie" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Genre</label>
                             <select id="categorie" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option selected>Roman</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="FR">France</option>
-                                <option value="DE">Germany</option>
+                                <optgroup label="Fiction">
+                                <optgroup label="Sous-genres">
+                                    <option selected value="romance">Romance</option>
+                                    <option value="mystery">Mystère</option>
+                                    <option value="science-fiction">Science-fiction</option>
+                                    <option value="thriller-suspense">Thriller/Suspense</option>
+                                    <option value="historical-fiction">Fiction historique</option>
+                                    <option value="literary-fiction">Fiction littéraire</option>
+                                    <option value="young-adult">Jeunes adultes</option>
+                                    <option value="childrens-literature">Littérature pour enfants</option>
+                                <optgroup label="Fantaisie">
+                                <optgroup label="Sous-genres">
+                                    <option value="urban-fantasy">Fantaisie urbaine</option>
+                                    <option value="epic-high-fantasy">Fantaisie épique / haute fantaisie</option>
+                                    <option value="magical-realism">Réalisme magique</option>
+                                </optgroup>
+                                </optgroup>
+                                </optgroup>
+                                </optgroup>
+                                <optgroup label="Non-fiction">
+                                <optgroup label="Sous-genres">
+                                    <option value="biography">Biographie</option>
+                                    <option value="self-help">Auto-assistance</option>
+                                    <option value="history">Histoire</option>
+                                <optgroup label="Science">
+                                <optgroup label="Sous-genres">
+                                    <option value="biology">Biologie</option>
+                                    <option value="chemistry">Chimie</option>
+                                    <option value="physics">Physique</option>
+                                    <option value="astronomy">Astronomie</option>
+                                    <option value="mathematics">Mathematique</option>
+                                </optgroup>
+                                </optgroup>
+                                <option value="business">Entreprise</option>
+                                <option value="politics">Politique</option>
+                                <option value="memoir">Mémoire</option>
+                                <option value="true-crime">Crime véritable</option>
+                                <option value="travel">Voyage</option>
+                                </optgroup>
+                                </optgroup>
+                                <option value="poetry">Poésie</option>
+                                <option value="drama">Drame</option>
+                                <option value="comics-graphic-novels">Bandes dessinées / Romans graphiques</option>
                             </select>
                         </div>
 
@@ -353,7 +396,7 @@
 
 
 
-   
+
 
     <div id="popup-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative w-full max-w-md max-h-full">
@@ -369,7 +412,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                     <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want to delete this book ?</h3>
-                   
+
                     <button data-modal-hide="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No, cancel</button>
                     <button data-modal-hide="popup-modal" type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
                         Yes, I'm sure

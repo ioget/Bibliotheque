@@ -117,7 +117,7 @@
     <main class="mt-5 mx-0 ">
         <section class="dashboard    dash p-2 gap-x-4">
 
-            <aside class="Menu overflow-x-hidden p-2 z-20  top-5 h-[calc(80vh-18px)] shadow-lg box-border  sticky bg-gray-200 rounded-2xl  flex flex-col gap-y-6 ">
+            <aside class="Menu overflow-x-hidden p-2 z-20  top-5 h-[calc(80vh-18px)] shadow-lg box-border border  sticky bg-white rounded-2xl  flex flex-col gap-y-6 ">
                 <div class=" ">
                     <button class="flex dropMenu  justify-start items-center gap-x-3">
                         <img src="/assets/img/icons/menu-outline.svg" class="w-[37px] h-[37px] rounded-xl hover:scale-105  border border-neutral-800 shadow " alt="" srcset="">
@@ -133,7 +133,7 @@
                 </div>
 
                 <div>
-                    <a href="/" class="flex  pl-2 justify-start items-center gap-x-3">
+                    <a href="" class="flex  pl-2 justify-start items-center gap-x-3">
                         <img src="/assets/img/caisse2.svg" class="w-[25px] h-[25px]  hover:scale-105  " alt="" srcset="">
                         <span class=" hover:text-[#144e93] hover:font-bold  <?= $data['navLinkActive'] === "caisse" ? " text-[#144e93]" : "" ?>">Librarian</span>
                     </a>
@@ -168,9 +168,9 @@
                 </div>
 
                 <div>
-                    <a href="" class="flex pl-2 justify-start items-center gap-x-3">
+                    <a href="/dash/admin" class="flex pl-2 justify-start items-center gap-x-3">
                         <img src="/assets/img/admin.svg" class="w-[25px] h-[25px]  hover:scale-105  " alt="" srcset="">
-                        <span class=" hover:text-[#144e93] hover:font-bold  ">Admin</span>
+                        <span class=" hover:text-[#144e93] hover:font-bold  <?= $data['navLinkActive'] === "admin" ? " text-[#144e93]" : "" ?>">Admin</span>
                     </a>
                 </div>
 
@@ -182,7 +182,7 @@
                 </div>
 
                 <div>
-                    <a href="" class="flex pl-2 justify-start  items-start gap-x-3">
+                    <a href="/dash/logout" class="flex pl-2 justify-start  items-start gap-x-3">
                         <img src="/assets/img/icons/log-out-outline.svg" class="w-[25px] h-[25px]  hover:scale-105  " alt="" srcset="">
                         <span class="  hover:text-[#144e93] hover:font-bold whitespace-nowrap   ">Log out</span>
                     </a>

@@ -75,4 +75,20 @@ class Admin extends BaseController
         $data['navLinkActive'] = 'books';
         return $this->render('books', $data, 'Admin/','templates/headerAdmin',"templates/footerAdmin");
     }
+
+    public function admin()
+    {
+       
+            $data['navLinkActive'] = 'admin';
+            return $this->render('admin', $data, 'Admin/','templates/headerAdmin',"templates/footerAdmin");
+    }
+
+    public function logout()
+    {
+        //  backend logout here
+
+
+        // redirection to login page
+        return redirect()->to( base_url() ."/dashboard");
+    }
 }

@@ -1,4 +1,4 @@
-<footer class="h-ful w-full  items-start justify-around flex  bg-gray-200 p-2">
+<footer class="h-ful w-full  items-start justify-around flex  bg-gray-100 p-2">
 
     <div class="flex w-[130px]  flex-col">
         <span class=" text-lg text-[#663300] font-bold"> La Bibliothèque</span>
