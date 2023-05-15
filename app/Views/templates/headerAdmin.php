@@ -5,8 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php echo link_tag('/assets/css/dist/style.css'); ?>
+    <?php echo link_tag('/assets/css/dist/style.css'); ?>  
+    <script type="module" src="/assets/js/Popover.js" defer></script> 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="/assets/js/app.js" defer></script> 
+    <script type="module" src="/assets/js/axios.js" defer></script> 
     <script src="/assets/js/dashboard.js" defer></script> 
+    <script type="module" src="/assets/js/TableRow.js" defer></script> 
     <script src="/assets/js/flowbite.min.js" defer></script> 
     <script defer src="/assets/js/alpinejs.cdn.min.js" defer></script>
     <script defer src="/assets/js/chart.umd.js" defer></script>
@@ -33,21 +38,24 @@
 
 #c9c9c7  : fs logo (gris)
 
+text-[#36A2EB]
 -->
 <header class="  z-40  bg-neutral-800  p-2">
     <div class="flex  justify-between">
-        <div class="logo ml-3 flex items-end gap-x-3 ">
+        <div class="logo ml-3 flex items-center gap-x-3 ">
             <!-- <a href=""><img src="/assets/img/icons/menu-outline.svg" class="w-[30px] h-[30px] rounded-xl hover:scale-105 bg-white " alt="" srcset=""></a> -->
-            <a href="/"> <img src="/assets/img/logo.jpg" class="w-[50px] h-[50px]   object-cover  rounded-full " alt="" srcset=""> </a>
+           <div class="logo">
+                <a href="/"> <img src="/assets/img/logo.jpg" class=" w-[35px] h-[35px]   object-cover  rounded-full " alt="" srcset=""> </a>
+           </div> 
             <div class="text-white flex gap-x-2 items-end">
                 <p> Library Management </p>
                 <img src="/assets/img/icons/chevron-forward-outline.svg" width="15" class="bg-white scale-105 relative rounded-r-full -top-1 " alt="">
             </div>
         </div>
-        <div class="user  flex flex-row-reverse gap-x-2 items-end">
-            <div class="user border-2 rounded-full flex items-end h-fit p-[2px] bg-[#144e93] ">
+        <div class="user  flex flex-row-reverse gap-x-2 items-center">
+            <div class="user border-1 rounded-full flex items-end h-fit p-[2px] bg-[#36A2EB]">
                 <div>
-                    <a href="/"> <img src="/assets/img/icons/person-sharp.svg" class="w-[30px] h-[30px] border-1 object-cover bg-white  rounded-full " alt="" srcset=""> </a>
+                    <a href="/"> <img src="/assets/img/icons/person-sharp.svg" class="w-[30px]  h-[30px] border-1 object-cover bg-white  rounded-full " alt="" srcset=""> </a>
                 </div>
             </div>
             <div class="text-white flex  items-center ">
@@ -62,23 +70,28 @@
     <style>
         .dash {
             display: grid;
-            grid-template-columns: 2fr 10fr;
-            transition: 1s;
-        }
-
-        .dashReset {
-            display: grid;
             grid-template-columns: 1fr 22fr;
             transition: 1s;
         }
 
+        .dashReset {
+           
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+            transition: 0.3s;
+        }
+
         .dropMenu {
-            width: 51px;
+            width: 250px;
             /* transition: width  1s ease-in-out ;*/
         }
 
         .NotRBook {
             animation: NotRBook 3s ease-in-out infinite;
+        }
+
+        .imgr{
+            transform: rotate(180deg);
         }
 
         @keyframes NotRBook {
@@ -109,7 +122,7 @@
                     <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill" />
                 </svg>
             </div>
-            <span class="text-[#663300] font-bold  mt-2  text-2xl">La Bibliothèque</span>
+            <span class="text-[#663300] font-bold  mt-2  text-2xl">The Library</span>
         </div>
     </div>
 
@@ -117,7 +130,7 @@
     <main class="mt-5 mx-0 ">
         <section class="dashboard    dash p-2 gap-x-4">
 
-            <aside class="Menu overflow-x-hidden p-2 z-20  top-5 h-[calc(80vh-18px)] shadow-lg box-border border  sticky bg-white rounded-2xl  flex flex-col gap-y-6 ">
+            <aside class="Menu overflow-x-hidden p-2 z-20   top-5 h-[calc(80vh-18px)] w-[51px] shadow-lg box-border border  sticky bg-white rounded-2xl  flex flex-col gap-y-6 ">
                 <div class=" ">
                     <button class="flex dropMenu  justify-start items-center gap-x-3">
                         <img src="/assets/img/icons/menu-outline.svg" class="w-[37px] h-[37px] rounded-xl hover:scale-105  border border-neutral-800 shadow " alt="" srcset="">
@@ -128,31 +141,31 @@
                 <div>
                     <a href="/dash" class="flex pl-2  justify-start items-center gap-x-3">
                         <img src="/assets/img/icons/desktop-outline.svg" class="w-[25px] h-[25px]  hover:scale-105  " alt="" srcset="">
-                        <span class="  hover:text-[#144e93] hover:font-bold <?= $data['navLinkActive'] === "home" ? " text-[#144e93]" : "" ?>">Dashboard</span>
+                        <span class="  hover:text-[#36A2EB] hover:font-bold <?= $data['navLinkActive'] === "home" ? " text-[#36A2EB]" : "" ?>">Dashboard</span>
                     </a>
                 </div>
 
                 <div>
                     <a href="" class="flex  pl-2 justify-start items-center gap-x-3">
                         <img src="/assets/img/caisse2.svg" class="w-[25px] h-[25px]  hover:scale-105  " alt="" srcset="">
-                        <span class=" hover:text-[#144e93] hover:font-bold  <?= $data['navLinkActive'] === "caisse" ? " text-[#144e93]" : "" ?>">Librarian</span>
+                        <span class=" hover:text-[#36A2EB] hover:font-bold  <?= $data['navLinkActive'] === "caisse" ? " text-[#36A2EB]" : "" ?>">Librarian</span>
                     </a>
                 </div>
 
                 <div>
                     <div href="/dash/members" class="flex flex-col pl-2 gap-y-2  gap-x-3">
-                        <div class="flex gap-x-3">
+                        <div class="flex dropMenu gap-x-3">
                              <img src="/assets/img/icons/people-circle-outline.svg" class="w-[28px] h-[28px]  hover:scale-105  " alt="" srcset="">
-                             <span class=" hover:text-[#144e93] hover:font-bold  <?= str_contains($data['navLinkActive'],"members") ? " text-[#144e93]" : "" ?>">Members</span>
+                             <span class=" hover:text-[#36A2EB] hover:font-bold  <?= str_contains($data['navLinkActive'],"members") ? " text-[#36A2EB]" : "" ?>">Members</span>
                         </div>
                         <div  class="w-full  gap-y-3 overflow-hidden flex flex-col ml-12 ">
                            <div class=" flex gap-x-3  ">
                              <img src="/assets/img/student.svg" class="w-[20px] h-[20px]  hover:scale-105  " alt="" srcset="">
-                             <a href="/dash/members/students">  <span class=" hover:text-[#144e93] ">Students</span> </a>
+                             <a href="/dash/members/students">  <span class=" hover:text-[#36A2EB] ">Students</span> </a>
                            </div>
                            <div class=" flex gap-x-3 ">
                              <img src="/assets/img/teacher.svg" class="w-[22] h-[22px]  hover:scale-105  " alt="" srcset="">
-                             <a href="/dash/members/teachers"> <span class=" hover:text-[#144e93]  ">Teachers</span> </a>
+                             <a href="/dash/members/teachers"> <span class=" hover:text-[#36A2EB]  ">Teachers</span> </a>
                            </div>
                         </div>
                     </div>
@@ -163,28 +176,28 @@
                 <div>
                     <a href="/dash/books/" class="flex  pl-2 justify-start items-center gap-x-3">
                         <img src="/assets/img/books.svg" class="w-[25px] h-[25px]  hover:scale-105  " alt="" srcset="">
-                        <span class=" hover:text-[#144e93] hover:font-bold  <?= $data['navLinkActive'] === "books" ? " text-[#144e93]" : "" ?>">Books</span>
+                        <span class=" hover:text-[#36A2EB] hover:font-bold  <?= $data['navLinkActive'] === "books" ? " text-[#36A2EB]" : "" ?>">Books</span>
                     </a>
                 </div>
 
                 <div>
                     <a href="/dash/admin" class="flex pl-2 justify-start items-center gap-x-3">
                         <img src="/assets/img/admin.svg" class="w-[25px] h-[25px]  hover:scale-105  " alt="" srcset="">
-                        <span class=" hover:text-[#144e93] hover:font-bold  <?= $data['navLinkActive'] === "admin" ? " text-[#144e93]" : "" ?>">Admin</span>
+                        <span class=" hover:text-[#36A2EB] hover:font-bold  <?= $data['navLinkActive'] === "admin" ? " text-[#36A2EB]" : "" ?>">Admin</span>
                     </a>
                 </div>
 
                 <div>
                     <a href="" class="flex pl-2 justify-start items-center gap-x-3">
                         <img src="/assets/img/icons/notifications-circle-outline.svg" class="w-[25px] h-[25px]  hover:scale-105  " alt="" srcset="">
-                        <span class=" hover:text-[#144e93] hover:font-bold  ">Notification</span>
+                        <span class=" hover:text-[#36A2EB] hover:font-bold  ">Notification</span>
                     </a>
                 </div>
 
                 <div>
                     <a href="/dash/logout" class="flex pl-2 justify-start  items-start gap-x-3">
                         <img src="/assets/img/icons/log-out-outline.svg" class="w-[25px] h-[25px]  hover:scale-105  " alt="" srcset="">
-                        <span class="  hover:text-[#144e93] hover:font-bold whitespace-nowrap   ">Log out</span>
+                        <span class="  hover:text-[#36A2EB] hover:font-bold whitespace-nowrap   ">Log out</span>
                     </a>
                 </div>
 

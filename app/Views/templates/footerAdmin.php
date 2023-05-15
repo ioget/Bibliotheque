@@ -1,7 +1,7 @@
 <footer class="h-ful w-full  items-start justify-around flex  bg-gray-100 p-2">
 
-    <div class="flex w-[130px]  flex-col">
-        <span class=" text-lg text-[#663300] font-bold"> La Bibliothèque</span>
+    <div class="flex w-[150px]  flex-col">
+        <span class=" text-lg text-[#663300]  whitespace-nowrap font-bold"> The Library</span>
         <em class=" text-sm "> &copy; copyright 2023</em>
         <div class="flex gap-x-4 mt-2 p-1">
             <img src="/assets/img/icons/logo-facebook.svg" class=" hover:scale-105 cursor-pointer" alt="" width="20" srcset="">

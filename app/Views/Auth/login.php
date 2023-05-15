@@ -36,7 +36,7 @@ mail($to,$subject,$txt,$headers); */
                     <label class="block text-gray-700 text-sm font-bold w-full " for="username">
                         Username:
                     </label>
-                    <input name="username" value="<?= set_value('username') ?>" class="shadow appearance-none border rounded   py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:shadow-lg " id="username" type="text" required>
+                    <input name="username" value="<?= set_value('username') ?>" class="shadow border-gray-200 appearance-none border rounded   py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:shadow-lg " id="username" type="text" required>
                 </div>
                 <div class="  text-xs text-red-400  ">
                     <?= validation_show_error('username') ?>
@@ -49,7 +49,7 @@ mail($to,$subject,$txt,$headers); */
                     <label class="block text-gray-700 text-sm font-bold w-full " for="password">
                         Password:
                     </label>
-                    <input name="password" value="" class="shadow  appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline  focus:shadow-lg " id="password" type="password" required>
+                    <input name="password" value="" class="shadow border-gray-200 appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline  focus:shadow-lg " id="password" type="password" required>
                 </div>
                 <div class="  text-xs text-red-400  ">
                     <?= validation_show_error('password') ?>

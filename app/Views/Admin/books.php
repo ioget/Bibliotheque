@@ -1,6 +1,9 @@
 <section class="content flex flex-col   gap-y-5  p-5">
 
     <div class="navlink text-2xl flex ">
+    <div class="hover:bg-gray-100 rounded-lg">
+        <img src="/assets/img/icons/home-outline.svg" width="28" class="   p-1" alt=""> 
+       </div>
         Dashboard / <?= ucfirst($data['navLinkActive']) ?>
         <img src="/assets/img/icons/chevron-forward-outline.svg" width="15" class=" scale-125 relative top-[2px]  rounded-r-full " alt="">
     </div>
@@ -17,10 +20,30 @@
                 <div class="w-[25%]">
                     <select id="large" class="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-lg bg-neutral-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option value="all" selected>All category</option>
-                        <option value="US">United States</option>
-                        <option value="CA">Canada</option>
-                        <option value="FR">France</option>
-                        <option value="DE">Germany</option>
+                        <option value="Philosophie">Philosophie</option>
+                        <option value="Histoire">Histoire</option>
+                        <option value="Littérature classique">Littérature classique</option>
+                        <option value="Poésie">Poésie</option>
+                        <option value="Théâtre">Théâtre</option>
+                        <option value="Sciences sociales">Sciences sociales</option>
+                        <option value="Sciences politiques">Sciences politiques</option>
+                        <option value="Sciences économiques">Sciences économiques</option>
+                        <option value="Sciences">Sciences</option>
+                        <option value="Médecine">Médecine</option>
+                        <option value="Psychologie">Psychologie</option>
+                        <option value="Sociologie">Sociologie</option>
+                        <option value="Anthropologie">Anthropologie</option>
+                        <option value="Archéologie">Archéologie</option>
+                        <option value="Arts">Arts</option>
+                        <option value="Musique">Musique</option>
+                        <option value="Éducation">Éducation</option>
+                        <option value="Droit">Droit</option>
+                        <option value="Géographie">Géographie</option>
+                        <option value="Géologie">Géologie</option>
+                        <option value="Biologie">Biologie</option>
+                        <option value="Chimie">Chimie</option>
+                        <option value="Physique">Physique</option>
+                        <option value="Mathématiques">Mathématiques</option>
                     </select>
                 </div>
 
@@ -33,8 +56,8 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                                 </svg>
                             </div>
-                            <input type="search" id="default-search" class="block h-[50px] outline-none w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg  bg-neutral-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Nom" required>
-                            <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+                            <input type="search" id="default-search" class="block h-[50px] outline-none w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg  bg-neutral-50 focus:ring-blue-500 focus:border-[#36A2EB] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Nom" required>
+                            <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-[#36A2EB] hover:shadow-lg focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
                         </div>
                     </div>
 
@@ -49,7 +72,7 @@
 
         </form>
 
-        <table class="w-full text-sm rounded-xl   border  text-left bg-white text-gray-500 dark:text-gray-400">
+        <table class="w-full text-sm rounded-xl table2  border  text-left bg-white text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase   bg-neutral-50 dark:bg-gray-700 dark:text-gray-400">
 
                 <tr>
@@ -337,49 +360,32 @@
                         <div>
                             <label for="categorie" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Genre</label>
                             <select id="categorie" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <optgroup label="Fiction">
-                                <optgroup label="Sous-genres">
-                                    <option selected value="romance">Romance</option>
-                                    <option value="mystery">Mystère</option>
-                                    <option value="science-fiction">Science-fiction</option>
-                                    <option value="thriller-suspense">Thriller/Suspense</option>
-                                    <option value="historical-fiction">Fiction historique</option>
-                                    <option value="literary-fiction">Fiction littéraire</option>
-                                    <option value="young-adult">Jeunes adultes</option>
-                                    <option value="childrens-literature">Littérature pour enfants</option>
-                                <optgroup label="Fantaisie">
-                                <optgroup label="Sous-genres">
-                                    <option value="urban-fantasy">Fantaisie urbaine</option>
-                                    <option value="epic-high-fantasy">Fantaisie épique / haute fantaisie</option>
-                                    <option value="magical-realism">Réalisme magique</option>
-                                </optgroup>
-                                </optgroup>
-                                </optgroup>
-                                </optgroup>
-                                <optgroup label="Non-fiction">
-                                <optgroup label="Sous-genres">
-                                    <option value="biography">Biographie</option>
-                                    <option value="self-help">Auto-assistance</option>
-                                    <option value="history">Histoire</option>
-                                <optgroup label="Science">
-                                <optgroup label="Sous-genres">
-                                    <option value="biology">Biologie</option>
-                                    <option value="chemistry">Chimie</option>
-                                    <option value="physics">Physique</option>
-                                    <option value="astronomy">Astronomie</option>
-                                    <option value="mathematics">Mathematique</option>
-                                </optgroup>
-                                </optgroup>
-                                <option value="business">Entreprise</option>
-                                <option value="politics">Politique</option>
-                                <option value="memoir">Mémoire</option>
-                                <option value="true-crime">Crime véritable</option>
-                                <option value="travel">Voyage</option>
-                                </optgroup>
-                                </optgroup>
-                                <option value="poetry">Poésie</option>
-                                <option value="drama">Drame</option>
-                                <option value="comics-graphic-novels">Bandes dessinées / Romans graphiques</option>
+                                <option value="others">Others</option>
+                                <option value="Philosophie">Philosophie</option>
+                                <option value="Histoire">Histoire</option>
+                                <option value="Littérature classique">Littérature classique</option>
+                                <option value="Poésie">Poésie</option>
+                                <option value="Théâtre">Théâtre</option>
+                                <option value="Sciences sociales">Sciences sociales</option>
+                                <option value="Sciences politiques">Sciences politiques</option>
+                                <option value="Sciences économiques">Sciences économiques</option>
+                                <option value="Sciences">Sciences</option>
+                                <option value="Médecine">Médecine</option>
+                                <option value="Psychologie">Psychologie</option>
+                                <option value="Sociologie">Sociologie</option>
+                                <option value="Anthropologie">Anthropologie</option>
+                                <option value="Archéologie">Archéologie</option>
+                                <option value="Arts">Arts</option>
+                                <option value="Musique">Musique</option>
+                                <option value="Éducation">Éducation</option>
+                                <option value="Droit">Droit</option>
+                                <option value="Géographie">Géographie</option>
+                                <option value="Géologie">Géologie</option>
+                                <option value="Biologie">Biologie</option>
+                                <option value="Chimie">Chimie</option>
+                                <option value="Physique">Physique</option>
+                                <option value="Mathématiques">Mathématiques</option>
+                                <option value="Informatique">Informatique</option>
                             </select>
                         </div>
 

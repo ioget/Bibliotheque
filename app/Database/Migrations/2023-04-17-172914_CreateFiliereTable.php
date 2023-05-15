@@ -18,15 +18,9 @@ class CreateFiliereTable extends Migration
             'libelle' => [
                 'type' => 'VARCHAR',
                 'constraint' => 255,
-            ],
-            'id_departement' => [
-                'type' => 'INT',
-                'constraint' => 5,
-                'unsigned' => true
             ]
         ]);
         $this->forge->addPrimaryKey('id_filiere');
-        $this->forge->addForeignKey('id_departement', 'departement', 'id_departement');
         $this->forge->createTable('filiere');
 
     

@@ -1,6 +1,9 @@
 <section class="content flex flex-col   gap-y-5  p-5">
 
     <div class="navlink text-2xl flex ">
+        <div class="hover:bg-gray-100 rounded-lg">
+        <img src="/assets/img/icons/home-outline.svg" width="28" class="   p-1" alt=""> 
+       </div>
         Dashboard / <?= ucfirst($data['navLinkActive']) ?>
         <img src="/assets/img/icons/chevron-forward-outline.svg" width="15" class=" scale-125 relative top-[2px]  rounded-r-full " alt="">
     </div>
@@ -32,7 +35,7 @@
                     </svg>
                 </div>
                 <input type="search" id="default-search" class="block h-[50px] outline-none w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg  bg-neutral-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search by name" required>
-                <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+                <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-[#36A2EB] hover:shadow-lg focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
             </div>
         </div>
 
@@ -93,7 +96,7 @@
                 3
             </td>
             <td class="px-6 py-4 flex gap-x-1 justify-end text-right">
-                <a href="#"  class="font-medium text-blue-600 dark:text-blue-500 hover:underline">See</a>
+                <a href="#"  class="font-medium text-[#36A2EB] dark:text-blue-500 hover:underline">See</a>
                 <span class=" w-1 h-5 bg-neutral-200  rounded-md "></span>
                 <a href="#" class="font-medium text-black dark:text-blue-500 hover:underline">Edit</a>
             </td>
@@ -117,7 +120,7 @@
                 3
             </td>
             <td class="px-6 py-4 flex gap-x-1 justify-end text-right">
-                <a href="#"  class="font-medium text-blue-600 dark:text-blue-500 hover:underline">See</a>
+                <a href="#"  class="font-medium text-[#36A2EB] dark:text-blue-500 hover:underline">See</a>
                 <span class=" w-1 h-5 bg-neutral-200  rounded-md "></span>
                 <a href="#" class="font-medium text-black dark:text-blue-500 hover:underline">Edit</a>
             </td>
@@ -140,7 +143,7 @@
                 3
             </td>
             <td class="px-6 py-4 flex gap-x-1 justify-end text-right">
-                <a href="#"  class="font-medium text-blue-600 dark:text-blue-500 hover:underline">See</a>
+                <a href="#"  class="font-medium text-[#36A2EB] dark:text-blue-500 hover:underline">See</a>
                 <span class=" w-1 h-5 bg-neutral-200  rounded-md "></span>
                 <a href="#" class="font-medium text-black dark:text-blue-500 hover:underline">Edit</a>
             </td>

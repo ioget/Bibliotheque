@@ -1,24 +1,8 @@
 
 <main class="flex  gap-x-6 ">
 
-    <section class="  md:p-0  mt-7  pt-10  px-10  ">
-        <div class=" font-bold  text-5xl ">Register at the library of the faculty of sciences of Ngaoundéré to benefit from the knowledge.</div>
-        <div>
-            <img src="/assets/img/livre.jpg" alt="" srcset="">
-        </div>
-        <div class="mt-16">
-            <div class="mb-5 ">
-                <p class=" text-neutral-500">Because <q class=" font-bold">The mind that does not read loses weight like the body that does not eat</q> <span class="text-neutral-700 ">(Victor Hugo)</span> consult the available books for free.</p>
-            </div>
-
-            <a  href="../consult" class="border p-4 w-fit text-white flex items-center gap-x-1 hover:bg-[#144e99] hover:shadow-2xl hover:font-bold     rounded-3xl " style="background: rgb(150,132,244);
-background: linear-gradient(90deg, rgba(150,132,244,1) 0%, rgba(134,170,244,1) 31%, rgba(163,227,227,1) 100%);">
-                <p> Consult available books</p>
-                <span><img src="/assets/img/icons/arrow-forward-outline.svg" width="18" alt="" srcset=""></span>
-            </a>
-
-        </div>
-    </section>
+   
+<?php require "tmp.php"; ?>
 
 
     <section class="  ml-5  md:p-0  mt-7  pt-10    ">
@@ -46,7 +30,7 @@ background: linear-gradient(90deg, rgba(150,132,244,1) 0%, rgba(134,170,244,1) 3
                         <label class="block text-gray-700 text-sm font-bold w-full " for="fristname">
                             Frist name:
                         </label>
-                        <input name="fristname" value="<?= set_value('fristname') ?>" class="shadow focus:border-[#144e93] appearance-none border rounded   py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:shadow-lg " id="fristname" type="text" required>
+                        <input name="fristname" value="<?= set_value('fristname') ?>" class="shadow border-gray-200 focus:border-[#144e93] appearance-none border rounded   py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:shadow-lg " id="fristname" type="text" required>
                     </div>
                     <div class="  text-xs text-red-400  ">
                         <?= validation_show_error('fristname') ?>
@@ -60,7 +44,7 @@ background: linear-gradient(90deg, rgba(150,132,244,1) 0%, rgba(134,170,244,1) 3
                         <label class="block text-gray-700 text-sm font-bold w-full " for="lastname">
                             Last name:
                         </label>
-                        <input name="lastname" value="<?= set_value('lastname') ?>" class="shadow  appearance-none border rounded   py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-[#144e93] focus:shadow-lg " id="lastname" type="text" required>
+                        <input name="lastname" value="<?= set_value('lastname') ?>" class="shadow border-gray-200 appearance-none border rounded   py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-[#144e93] focus:shadow-lg " id="lastname" type="text" required>
                     </div>
                     <div class="  text-xs text-red-400  ">
                         <?= validation_show_error('lastname') ?>
@@ -75,7 +59,7 @@ background: linear-gradient(90deg, rgba(150,132,244,1) 0%, rgba(134,170,244,1) 3
                         <label class="block text-gray-700 text-sm font-bold w-full " for="email">
                             Email:
                         </label>
-                        <input name="email" value="<?= set_value('email') ?>" max=8 class="shadow appearance-none border rounded   py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-[#144e93] focus:shadow-lg " id="email" type="text" required>
+                        <input name="email" value="<?= set_value('email') ?>" max=8 class="shadow border-gray-200 appearance-none border rounded   py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-[#144e93] focus:shadow-lg " id="email" type="text" required>
                     </div>
                     <div class="  text-xs text-red-400  ">
                         <?= validation_show_error('email') ?>
@@ -88,7 +72,7 @@ background: linear-gradient(90deg, rgba(150,132,244,1) 0%, rgba(134,170,244,1) 3
                         <label class="block text-gray-700 text-sm font-bold w-full " for="date_naissance">
                             Date naissance:
                         </label>
-                        <input name="date_naissance" value="<?= set_value('date_naissance') ?>" class="shadow   w-full  appearance-none border rounded   py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-[#144e93] focus:shadow-outline focus:shadow-lg " id="date_naissance" type="date" required>
+                        <input name="date_naissance" value="<?= set_value('date_naissance') ?>" class="shadow border-gray-200  w-full  appearance-none border rounded   py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-[#144e93] focus:shadow-outline focus:shadow-lg " id="date_naissance" type="date" required>
                     </div>
                     <div class="  text-xs text-red-400  ">
                         <?= validation_show_error('date_naissance') ?>
@@ -101,7 +85,7 @@ background: linear-gradient(90deg, rgba(150,132,244,1) 0%, rgba(134,170,244,1) 3
                     <div class="flex   justify-start items-center ">
                         <label for="sexe" class="block text-gray-700 text-sm font-bold w-full">Sexe:</label>
 
-                        <select id="sexe" name="sexe" value="<?= set_value('sexe') ?>" class=" focus:shadow-lg  border outline-none border-gray-300  w-full text-gray-900 text-sm rounded-lg focus:border-[#144e93] block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <select id="sexe" name="sexe" value="<?= set_value('sexe') ?>" class=" focus:shadow-lg   border outline-none border-gray-200  w-full text-gray-900 text-sm rounded-lg focus:border-[#144e93] block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                             <option value="M" selected>Masculin</option>
                             <option value="F">Féminin</option>
                         </select>
@@ -116,7 +100,7 @@ background: linear-gradient(90deg, rgba(150,132,244,1) 0%, rgba(134,170,244,1) 3
                         <label class="block text-gray-700 text-sm font-bold w-full " for="code">
                            Secret code:
                         </label>
-                        <input name="code" value="" class="shadow  appearance-none border rounded   py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-[#144e93] focus:shadow-outline  focus:shadow-lg " id="code" type="password" required>
+                        <input name="code" value="" class="shadow border-gray-200 appearance-none border rounded   py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-[#144e93] focus:shadow-outline  focus:shadow-lg " id="code" type="password" required>
                     </div>
                     <div class="  text-xs text-red-400  ">
                         <?= validation_show_error('code') ?>
@@ -131,7 +115,7 @@ background: linear-gradient(90deg, rgba(150,132,244,1) 0%, rgba(134,170,244,1) 3
                         <label class="block text-gray-700 text-sm font-bold w-full " for="password">
                             Password:
                         </label>
-                        <input name="password" value="" class="shadow  appearance-none border rounded   py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-[#144e93] focus:shadow-outline  focus:shadow-lg " id="password" type="password" required>
+                        <input name="password" value="" class="shadow  appearance-none border rounded border-gray-200  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-[#144e93] focus:shadow-outline  focus:shadow-lg " id="password" type="password" required>
                     </div>
                     <div class="  text-xs text-red-400  ">
                         <?= validation_show_error('password') ?>
@@ -144,7 +128,7 @@ background: linear-gradient(90deg, rgba(150,132,244,1) 0%, rgba(134,170,244,1) 3
                         <label class="block text-gray-700 text-sm font-bold w-full " for="passwordConf">
                             password Confirm:
                         </label>
-                        <input name="passwordConf" value="" class="shadow  appearance-none border rounded focus:border-[#144e93] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline  focus:shadow-lg " id="password" type="password" required>
+                        <input name="passwordConf" value="" class="shadow  appearance-none border border-gray-200 rounded focus:border-[#144e93] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline  focus:shadow-lg " id="password" type="password" required>
                     </div>
                     <div class="  text-xs text-red-400  ">
                         <?= validation_show_error('passwordConf') ?>

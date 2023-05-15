@@ -3,10 +3,23 @@
 @tailwind utilities;
 
 * {
-    font-family: "Roboto";
+    font-family: 'Source', 'Times New Roman', Times, serif;
    /* box-sizing: border-box;
     border: 1px solid black; */
 }
+
+@font-face {
+    font-family: 'Source';
+    src: url(/assets/fonts/Source/SourceSerifPro-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Source';
+    font-weight: bold;
+    src: url(/assets/fonts/Source/SourceSerifPro-Bold.ttf);
+}
+
+
 
 /* npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
  */
@@ -27,6 +40,12 @@ main
     margin-left: 40px;
     margin-right: 40px;
 }
+
+.view
+{
+    background: rgb(150,132,244);background: linear-gradient(90deg, rgba(150,132,244,1) 0%, rgba(134,170,244,1) 31%, rgba(163,227,227,1) 100%);
+}
+
 
 
 

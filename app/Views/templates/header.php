@@ -12,7 +12,7 @@
 
 
 
-<body class=" ">
+<body class=" overflow-x-hidden ">
 
 
   <header class="font-serif mx-10 py-4">
@@ -31,8 +31,8 @@
              <img src="/assets/img/icons/chevron-down-outline.svg" width="12px" alt="" srcset="">
               <nav class="downdrop absolute shadow-md hidden  mt-[28px]  border rounded-xl z-20 w-[120px]  flex-col  items-center -ml-5 opacity-100 bg-white ">
                 <ul class="w-full flex flex-col items-center">
-                  <li class="py-3  hover:text-[#144e93] border-b-[1px] cursor-pointer text-black text-center w-full "> <a href="/students/registed"> Students</a></li>
-                  <li class="py-3 hover:text-[#144e93]  w-full cursor-pointer text-black text-center"><a href="/teachers/registed">Teachers </a></li>
+                  <li class="py-3  hover:text-[#144e93] border-b-[1px] cursor-pointer text-black font-normal text-center w-full "> <a href="/students/registed"> Students</a></li>
+                  <li class="py-3 hover:text-[#144e93]  w-full cursor-pointer text-black text-center font-normal"><a href="/teachers/registed">Teachers </a></li>
                 </ul>
               </nav>
             </li>
@@ -64,7 +64,7 @@
                 </svg>
                 <span class="sr-only">Loading...</span>
             </div>
-            <span class="text-[#663300] font-bold  mt-2  text-2xl">La Bibliothèque</span>
+            <span class="text-[#663300] font-bold  mt-2  text-2xl">The Library</span>
         </div>
     </div>
 

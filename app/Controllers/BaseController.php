@@ -64,7 +64,7 @@ abstract class BaseController extends Controller
     public $title = "Bibliothèque";
 
     // good format du vardump() ! back-end helper
-    public function vd($v)
+    public function d($v)
     {
         echo "<pre>";
         var_dump($v);

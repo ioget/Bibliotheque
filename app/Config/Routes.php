@@ -36,7 +36,7 @@ $routes->get('/', 'Home::index'); //
 
 //$routes->post('/api/registrationpermonth', 'ApiController::RegistrationPerMonth');
 
-$routes->get('/api/registration/(:alpha)', 'ApiController::registration/$1');
+$routes->get('/api/data', 'ApiController::data');
 
 /*
 $routes->group('api', function($routes){

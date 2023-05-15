@@ -17,14 +17,10 @@ class CreateNiveauTable extends Migration
                 'auto_increment' => true
             ],
             'libelle' => [
-                'type' => 'ENUM',
-                'constraint' => ['level1', 'level2','level3','master1','master2','phd']
+                'type' => 'VARCHAR',
+                'constraint' => 255
             ],
-            'id_users' => [
-                'type' => 'INT',
-                'constraint' => 5,
-                'unsigned' => true
-            ]
+           
            
         ]);
         $this->forge->addPrimaryKey('id_niveau');

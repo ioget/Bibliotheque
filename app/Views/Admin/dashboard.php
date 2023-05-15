@@ -2,6 +2,9 @@
 
 
     <div class="navlink text-2xl flex ">
+       <div class="hover:bg-gray-100 rounded-lg">
+        <img src="/assets/img/icons/home-outline.svg" width="28" class="   p-1" alt=""> 
+       </div>
         Dashboard / <?= ucfirst($data['navLinkActive']) ?>
         <img src="/assets/img/icons/chevron-forward-outline.svg" width="15" class=" scale-125 relative top-[2px]  rounded-r-full " alt="">
 
@@ -73,15 +76,15 @@
         </div>
 
         <div class=" border rounded-xl flex bg-white w-[280px]  shadow-xl p-5   justify-between ">
-            <div>
-                <img src="/assets/img/BorrowBook.svg" alt="" class="NotRBook absolute mt-1 opacity-25   " width="40" srcset="">
-                <div class="bg-red-300 absolute  shadow-xl  border ml-8 rounded-full  -mt-3">
-                    <img src="/assets/img/icons/close-outline.svg" alt="" class=" opacity-70  " width="25" srcset="">
+            <div class="   ">
+                <img src="/assets/img/BorrowBook.svg" alt="" class="NotRBook   absolute mt-1 opacity-25   " width="40" srcset="">
+                <div class="bg-red-300 absolute  shadow-xl  border ml-8 rounded-full   -mt-3">
+                    <img src="/assets/img/icons/close-outline.svg" alt="" class="    opacity-70  " width="25" srcset="">
                 </div>
             </div>
             <div class=" flex flex-col  items-end ">
                 <div class=" flex  text-red-300   font-bold text-2xl justify-center w-full">
-                    <span class="count notReturnBook">0</span>
+                    <span class="count notReturnBook ">0</span>
                 </div>
                 <div class=" text-lg">
                     Not returned books
@@ -108,10 +111,13 @@
     <div class=" rounded-xl  mt-5 bg-gray-100 p-5">
 
         <div class="flex justify-end">
-
             <div class="flex justify-around border bg-white rounded-xl shadow-md  items-end w-[50%] p-2">
-                <div>
-                    <label for="month" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Month</label>
+               
+                <div class="flex flex-col  ">
+                    <div class=" text-neutral-500 ">
+                        <h2>Pannel Control</h2>
+                    </div>
+                    <div class="mt-2 pl-5"><label for="month" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Month</label>
                     <select id="month" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option value="1" selected>January</option>
                         <option value="2">February</option>
@@ -125,7 +131,7 @@
                         <option value="11">October</option>
                         <option value="12">November</option>
                         <option value="13">December</option>
-                    </select>
+                    </select></div>
                 </div>
                 <div>
                     <label for="year" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Year</label>
@@ -134,26 +140,74 @@
                         <option value="2024">2024</option>
                         <option value="2025">2025</option>
                         <option value="2026">2026</option>
-                      
+
                     </select>
                 </div>
 
                 <div>
-                    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Fliter</button>
+                    <button type="submit" class="js-btn text-white bg-[#36A2EB] hover:shadow-lg focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Fliter</button>
                 </div>
             </div>
         </div>
 
-        <div class="flex flex-col rounded-xl  bg-gray-100  mt-6 gap-y-10 p-5">
+        <div class="chart1 flex flex-col rounded-xl  bg-gray-100  mt-6 gap-y-10 p-5">
+
             <div class=" flex  justify-around  gap-x-10">
                 <div class=" flex   bg-white rounded-xl border shadow-xl items-center flex-col w-[450px] h-[300px]">
+                    <p class="flex px-5 py-1 w-full items-center justify-end text-sm text-gray-500 dark:text-gray-400">
+                        Help
+                        <button data-popover-target="popover-description" data-popover-placement="bottom-end" type="button"><svg class="w-4 h-4 ml-2 text-gray-400 hover:text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="sr-only">Show information</span>
+                        </button>
+                    </p>
+                    <div data-popover id="popover-description" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400">
+                        <div class="p-3 space-y-2">
+
+                            <h3 class="font-semibold text-gray-900 dark:text-white">Activity growth - Incremental</h3>
+                            <p>Report helps navigate cumulative growth of community activities. Ideally, the chart should have a growing trend, as stagnating chart signifies a significant decrease of community activity.</p>
+                            <h3 class="font-semibold text-gray-900 dark:text-white">Calculation</h3>
+                            <p>For each date bucket, the all-time volume of activities is calculated. This means that activities in period n contain all activities up to period n, plus the activities generated by your community in period.</p>
+                            <a href="#" class="flex items-center font-medium text-[#36A2EB] dark:text-blue-500 dark:hover:text-[#36A2EB] hover:text-blue-700">Read more <svg class="w-4 h-4 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div data-popper-arrow></div>
+                    </div>
                     <canvas id="myChart"></canvas>
                     <p> Registration per month </p>
                 </div>
 
                 <div class=" flex   bg-white rounded-xl border  shadow-xl items-center flex-col  w-[450px] h-[300px]">
+
+                    <p class="flex px-5 py-1 w-full items-center justify-end text-sm text-gray-500 dark:text-gray-400">
+                        Help
+                        <button data-popover-target="popover-description" data-popover-placement="bottom-end" type="button"><svg class="w-4 h-4 ml-2 text-gray-400 hover:text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="sr-only">Show information</span>
+                        </button>
+                    </p>
+                    <div data-popover id="popover-description" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400">
+                        <div class="p-3 space-y-2">
+
+                            <h3 class="font-semibold text-gray-900 dark:text-white">Activity growth - Incremental</h3>
+                            <p>Report helps navigate cumulative growth of community activities. Ideally, the chart should have a growing trend, as stagnating chart signifies a significant decrease of community activity.</p>
+                            <h3 class="font-semibold text-gray-900 dark:text-white">Calculation</h3>
+                            <p>For each date bucket, the all-time volume of activities is calculated. This means that activities in period n contain all activities up to period n, plus the activities generated by your community in period.</p>
+                            <a href="#" class="flex items-center font-medium text-[#36A2EB] dark:text-blue-500 dark:hover:text-[#36A2EB] hover:text-blue-700">Read more <svg class="w-4 h-4 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div data-popper-arrow></div>
+                    </div>
+
                     <canvas id="myChart2"></canvas>
                     <p> Book returned according to return date </p>
+
                 </div>
             </div>
 
@@ -161,19 +215,133 @@
 
                 <div class="flex  bg-white rounded-xl border  shadow-xl gap-x-10">
                     <div class=" flex  items-center flex-col  w-fit h-fit">
+                        <p class="flex px-5 py-1 w-full items-center justify-end text-sm text-gray-500 dark:text-gray-400">
+                            Help
+                            <button data-popover-target="popover-description" data-popover-placement="bottom-end" type="button"><svg class="w-4 h-4 ml-2 text-gray-400 hover:text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="sr-only">Show information</span>
+                            </button>
+                        </p>
+                        <div data-popover id="popover-description" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400">
+                            <div class="p-3 space-y-2">
+
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Activity growth - Incremental</h3>
+                                <p>Report helps navigate cumulative growth of community activities. Ideally, the chart should have a growing trend, as stagnating chart signifies a significant decrease of community activity.</p>
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Calculation</h3>
+                                <p>For each date bucket, the all-time volume of activities is calculated. This means that activities in period n contain all activities up to period n, plus the activities generated by your community in period.</p>
+                                <a href="#" class="flex items-center font-medium text-[#36A2EB] dark:text-blue-500 dark:hover:text-[#36A2EB] hover:text-blue-700">Read more <svg class="w-4 h-4 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div data-popper-arrow></div>
+                        </div>
                         <canvas id="myChart3"></canvas>
                         <p>Most requested book </p>
                     </div>
                 </div>
+
+                
+                
                 <div class="flex  bg-white rounded-xl border  shadow-xl gap-x-10">
                     <div class=" flex  items-center flex-col  w-fit h-fit">
+                        <p class="flex px-5 py-1 w-full items-center justify-end text-sm text-gray-500 dark:text-gray-400">
+                            Help
+                            <button data-popover-target="popover-description" data-popover-placement="bottom-end" type="button"><svg class="w-4 h-4 ml-2 text-gray-400 hover:text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="sr-only">Show information</span>
+                            </button>
+                        </p>
+                        <div data-popover id="popover-description" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400">
+                            <div class="p-3 space-y-2">
+
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Activity growth - Incremental</h3>
+                                <p>Report helps navigate cumulative growth of community activities. Ideally, the chart should have a growing trend, as stagnating chart signifies a significant decrease of community activity.</p>
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Calculation</h3>
+                                <p>For each date bucket, the all-time volume of activities is calculated. This means that activities in period n contain all activities up to period n, plus the activities generated by your community in period.</p>
+                                <a href="#" class="flex items-center font-medium text-[#36A2EB] dark:text-blue-500 dark:hover:text-[#36A2EB] hover:text-blue-700">Read more <svg class="w-4 h-4 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div data-popper-arrow></div>
+                        </div>
                         <canvas id="myChart4"></canvas>
                         <p> Best readers </p>
                     </div>
                 </div>
             </div>
 
+            <div class="flex  justify-around  gap-x-10">
+
+            <div class=" flex   bg-white rounded-xl border shadow-xl items-center flex-col w-[450px] h-[300px]">
+                    <p class="flex px-5 py-1 w-full items-center justify-end text-sm text-gray-500 dark:text-gray-400">
+                        Help
+                        <button data-popover-target="popover-description" data-popover-placement="bottom-end" type="button"><svg class="w-4 h-4 ml-2 text-gray-400 hover:text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="sr-only">Show information</span>
+                        </button>
+                    </p>
+                    <div data-popover id="popover-description" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400">
+                        <div class="p-3 space-y-2">
+
+                            <h3 class="font-semibold text-gray-900 dark:text-white">Activity growth - Incremental</h3>
+                            <p>Report helps navigate cumulative growth of community activities. Ideally, the chart should have a growing trend, as stagnating chart signifies a significant decrease of community activity.</p>
+                            <h3 class="font-semibold text-gray-900 dark:text-white">Calculation</h3>
+                            <p>For each date bucket, the all-time volume of activities is calculated. This means that activities in period n contain all activities up to period n, plus the activities generated by your community in period.</p>
+                            <a href="#" class="flex items-center font-medium text-[#36A2EB] dark:text-blue-500 dark:hover:text-[#36A2EB] hover:text-blue-700">Read more <svg class="w-4 h-4 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div data-popper-arrow></div>
+                    </div>
+                    <canvas id="myChart5"></canvas>
+                    <p> Registration per month </p>
+                </div>
+
+                <div class=" flex   bg-white rounded-xl border  shadow-xl items-center flex-col  w-[450px] h-[300px]">
+
+                    <p class="flex px-5 py-1 w-full items-center justify-end text-sm text-gray-500 dark:text-gray-400">
+                        Help
+                        <button data-popover-target="popover-description" data-popover-placement="bottom-end" type="button"><svg class="w-4 h-4 ml-2 text-gray-400 hover:text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="sr-only">Show information</span>
+                        </button>
+                    </p>
+                    <div data-popover id="popover-description" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400">
+                        <div class="p-3 space-y-2">
+
+                            <h3 class="font-semibold text-gray-900 dark:text-white">Activity growth - Incremental</h3>
+                            <p>Report helps navigate cumulative growth of community activities. Ideally, the chart should have a growing trend, as stagnating chart signifies a significant decrease of community activity.</p>
+                            <h3 class="font-semibold text-gray-900 dark:text-white">Calculation</h3>
+                            <p>For each date bucket, the all-time volume of activities is calculated. This means that activities in period n contain all activities up to period n, plus the activities generated by your community in period.</p>
+                            <a href="#" class="flex items-center font-medium text-[#36A2EB] dark:text-blue-500 dark:hover:text-[#36A2EB] hover:text-blue-700">Read more <svg class="w-4 h-4 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div data-popper-arrow></div>
+                    </div>
+
+                    <canvas id="myChart6"></canvas>
+                    <p> Book returned according to return date </p>
+
+                </div>
+            </div>
+            </div>
+
         </div>
+
+
+
+    </div>
+
+    </div>
     </div>
 
 
@@ -185,132 +353,11 @@
 </main>
 
 
-
 <script>
+    
     // récupérez les données pour le graphique à partir du modèle et stockez-les dans une variable JavaScript
     // ['student' => 15, 'teacher' => 23, 'members' => 38, "borrowBook" => 32, "notReturnBook" => 5, 'allBook' => 243]
-    window.addEventListener('load', function(e) {
-        var data = <?php echo json_encode($data['graph']); ?>;
-        var stats = <?php echo json_encode([['name' => 'student',  'value' => 15], ['name' => 'teacher', 'value' => 23], ['name' => 'members', 'value' => 38], ['name' => 'borrowBook', 'value' => 32], ['name' => 'notReturnBook', 'value' => 5], ['name' => 'allBook', 'value' => 243],]); ?>;
 
-
-
-        function drawGraph(selector, type, label, labels, data, bg = "#36A2EB") {
-            var ctx = document.getElementById(selector).getContext('2d');
-            var myChart = new Chart(ctx, {
-                type: type,
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        label: label,
-                        data: data,
-                        backgroundColor: bg,
-                        tension: 0.1
-                    }],
-
-                }
-            });
-        }
-
-
-        function drawDoubleGraph(selector, type, label, labels1, labels2, data1, data2) {
-            var ctx2 = document.getElementById(selector).getContext('2d');
-            const mixedChart = new Chart(ctx2, {
-                type: type,
-                data: {
-                    labels: label,
-                    datasets: [{
-                        label: labels1,
-                        data: data1,
-                        type: 'line',
-                        order: 2
-                    }, {
-                        label: labels2,
-                        data: data2,
-                        type: 'line',
-                        order: 1
-                    }],
-
-                },
-            });
-        }
-
-
-
-
-        var ctx3 = document.getElementById("myChart3").getContext('2d');
-        const mixedChart2 = new Chart(ctx3, {
-            type: 'doughnut',
-            data: {
-                labels: [
-                    'Roman',
-                    'Historique',
-                    'Anime',
-                    'Poeme'
-                ],
-                datasets: [{
-                    label: 'Most read',
-                    data: [18, 42, 25, 15],
-                    backgroundColor: [
-                        'rgb(255, 99, 132)',
-                        'rgb(54, 162, 235)',
-                        'rgb(255, 205, 86)',
-                        'rgb(30, 255, 86)'
-                    ],
-                    hoverOffset: 4
-                }]
-            }
-        });
-
-        var ctx4 = document.getElementById("myChart4").getContext('2d');
-        const mixedChart4 = new Chart(ctx4, {
-            type: 'polarArea',
-            data: {
-                labels: [
-                    'Mathematiciens',
-                    'Physiciens',
-                    'Chimiste',
-                    'Informaticiens',
-                    'Biologiste'
-                ],
-                datasets: [{
-                    label: 'Best reader',
-                    data: [11, 16, 9, 6, 14],
-                    backgroundColor: [
-                        'rgb(255, 99, 132)',
-                        'rgb(75, 75, 192)',
-                        'rgb(255, 205, 86)',
-                        'rgb(201, 203, 207)',
-                        'rgb(0, 162, 235)'
-                    ]
-                }]
-            }
-        });
-
-        function speedNumber(selector, number) {
-            const counter = document.querySelector('.' + selector)
-
-            let animation = anime({
-                targets: counter,
-                innerHTML: number,
-                easing: 'linear', // accélération constante
-                round: 1, // arrondir les chiffres
-                duration: 2000 // durée de l'animation en millisecondes
-            }).play();
-        }
-
-
-
-
-        stats.forEach(s => {
-            speedNumber(s.name, s.value)
-        });
-
-        drawGraph("myChart", 'bar', 'Registration', data.labels, data.data)
-        drawDoubleGraph("myChart2", 'bar', data.labels, "Return date", "Supposed return time", [13, 8, 10, 10, 11, 14, 13, 16], [15, 5, 8, 7, 5, 10, 13, 12, 18, 7, 9, 10, 15, 5, 8, 10, 5, 16, 8, 10, 8, 7, 14])
-
-
-
-
-    }, false)
+   
 </script>
+
