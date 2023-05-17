@@ -28,6 +28,15 @@ main
     margin-right: 40px;
 }
 
+.logoCenter{
+    background-image: none;
+    display: inline-block;
+}
+
+p{
+    text-align: center;
+    background-color: black;
+}
 
 
 
