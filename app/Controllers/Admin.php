@@ -238,11 +238,12 @@ class Admin extends BaseController
                         $model =  new UsersModel();
                         $result = $model->getPrendreUsersLike2($search);
                         $users = [];
-                        // $this->d($result);
+                      //   $this->d($result);
                         foreach ($result as $value) {
                             $user = $model->getTeacher((int)$value->id_users, $search);
                             $users[] = $user;
                         }
+                     //   $this->d((int)$value->id_users);
                         $users = $model->removeDuplicates($users);
                         $data['users'] = $users;
                         break;

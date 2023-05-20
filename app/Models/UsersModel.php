@@ -96,12 +96,12 @@ class UsersModel extends Model
         }
     }
 
-    public function getTeacher()
+    public function getTeacher($id)
     {
         $pdo = $this->getPdo();
         try{
-            $stmt = $pdo->prepare("SELECT * FROM `users` WHERE `type` = :type ");
-            $stmt->execute(['type' => "Enseignant"]);
+            $stmt = $pdo->prepare("SELECT * FROM `users` WHERE `type` = :type  AND`id_users` = :id ");
+            $stmt->execute(['type' => "Enseignant","id" => $id]);
            $user = [];
             while( $obj= $stmt->fetch(PDO::FETCH_ASSOC))
             {
