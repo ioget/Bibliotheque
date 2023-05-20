@@ -15,6 +15,9 @@ class Admin extends BaseController
 {
 
 
+    protected $Author = "mamakemrosly@gmail.com";
+
+
     public function __construct()
     {
         helper('url');
@@ -53,6 +56,7 @@ class Admin extends BaseController
                         return $this->render('login', $data, 'Auth/');
                     } else {
                         $_SESSION['admin'] = $user;
+                        $_SESSION['Author'] = "mamakemrosly@gmail.com";
                         return redirect()->to(base_url() . "/dashboard");
                         //  return $this->render('dashboard', $data, 'Admin/','templates/headerAdmin',"templates/footerAdmin");
                     }
