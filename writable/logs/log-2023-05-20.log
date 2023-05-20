@@ -22,3 +22,66 @@ in SYSTEMPATH\Model.php on line 841.
  4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-20 08:55:24 --> Call to undefined method App\Models\LivresModel::getLivreLike2
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\Admin.php(364): CodeIgniter\Model->__call('getLivreLike2', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->books()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-20 08:55:50 --> Too few arguments to function App\Models\LivresModel::getLivreLike2(), 1 passed in C:\xampp3\htdocs\BibioMardi\app\Controllers\Admin.php on line 364 and exactly 2 expected
+in APPPATH\Models\LivresModel.php on line 138.
+ 1 APPPATH\Controllers\Admin.php(364): App\Models\LivresModel->getLivreLike2('d')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->books()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-20 08:57:54 --> Call to undefined method App\Models\LivresModel::removeDuplicates
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\Admin.php(371): CodeIgniter\Model->__call('removeDuplicates', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->books()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-20 08:58:23 --> Trying to access array offset on value of type int
+in APPPATH\Views\Admin\books.php on line 108.
+ 1 APPPATH\Views\Admin\books.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'APPPATH\\Views\\Admin\\books.php', 108)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\books.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('Admin/books', [], true)
+ 5 APPPATH\Controllers\BaseController.php(105): view('Admin/books')
+ 6 APPPATH\Controllers\Admin.php(381): App\Controllers\BaseController->render('books', [...], 'Admin/', 'templates/headerAdmin', 'templates/footerAdmin')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->books()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-20 08:58:27 --> Trying to access array offset on value of type int
+in APPPATH\Views\Admin\books.php on line 108.
+ 1 APPPATH\Views\Admin\books.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'APPPATH\\Views\\Admin\\books.php', 108)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\books.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('Admin/books', [], true)
+ 5 APPPATH\Controllers\BaseController.php(105): view('Admin/books')
+ 6 APPPATH\Controllers\Admin.php(381): App\Controllers\BaseController->render('books', [...], 'Admin/', 'templates/headerAdmin', 'templates/footerAdmin')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->books()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-20 08:59:09 --> Trying to access array offset on value of type int
+in APPPATH\Views\Admin\books.php on line 108.
+ 1 APPPATH\Views\Admin\books.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'APPPATH\\Views\\Admin\\books.php', 108)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\books.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('Admin/books', [], true)
+ 5 APPPATH\Controllers\BaseController.php(105): view('Admin/books')
+ 6 APPPATH\Controllers\Admin.php(382): App\Controllers\BaseController->render('books', [...], 'Admin/', 'templates/headerAdmin', 'templates/footerAdmin')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->books()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

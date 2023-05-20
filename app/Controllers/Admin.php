@@ -183,27 +183,27 @@ class Admin extends BaseController
                         break;
 
                     case 1:
-                       $model =  new UsersModel();
-                       $result = $model->getPrendreUsersLike($search);
+                        $model =  new UsersModel();
+                        $result = $model->getPrendreUsersLike($search);
                         $users = [];
-                       // $this->d($result);
+                        // $this->d($result);
                         foreach ($result as $value) {
-                            $user = $model->getStudent((int)$value->id_users,$search);
+                            $user = $model->getStudent((int)$value->id_users, $search);
                             $users[] = $user;
                         }
-                         $users =$model->removeDuplicates($users);
+                        $users = $model->removeDuplicates($users);
                         $data['users'] = $users;
                         break;
-                    case 2: 
-                    $model =  new UsersModel();
-                       $result = $model->getPrendreUsersNoBack($search);
+                    case 2:
+                        $model =  new UsersModel();
+                        $result = $model->getPrendreUsersNoBack($search);
                         $users = [];
-                       // $this->d($result);
+                        // $this->d($result);
                         foreach ($result as $value) {
-                            $user = $model->getStudent((int)$value->id_users,$search);
+                            $user = $model->getStudent((int)$value->id_users, $search);
                             $users[] = $user;
                         }
-                         $users =$model->removeDuplicates($users);
+                        $users = $model->removeDuplicates($users);
                         $data['users'] = $users;
                         break;
 
@@ -224,34 +224,34 @@ class Admin extends BaseController
             if (!empty($_GET)) {
                 $cat = (int)$_GET['cat'];
                 $search = $_GET['search'];
-               // var_dump($_GET);
+                // var_dump($_GET);
                 switch ($cat) {
                     case 0:
                         $data['users'] = $model->getTeachers();
                         break;
 
                     case 1:
-                       $model =  new UsersModel();
-                       $result = $model->getPrendreUsersLike2($search);
+                        $model =  new UsersModel();
+                        $result = $model->getPrendreUsersLike2($search);
                         $users = [];
-                       // $this->d($result);
+                        // $this->d($result);
                         foreach ($result as $value) {
-                            $user = $model->getTeacher((int)$value->id_users,$search);
+                            $user = $model->getTeacher((int)$value->id_users, $search);
                             $users[] = $user;
                         }
-                         $users =$model->removeDuplicates($users);
+                        $users = $model->removeDuplicates($users);
                         $data['users'] = $users;
                         break;
-                    case 2: 
-                    $model =  new UsersModel();
-                       $result = $model->getPrendreUsersNoBack2($search);
+                    case 2:
+                        $model =  new UsersModel();
+                        $result = $model->getPrendreUsersNoBack2($search);
                         $users = [];
-                       // $this->d($result);
+                        // $this->d($result);
                         foreach ($result as $value) {
-                            $user = $model->getTeacher((int)$value->id_users,$search);
+                            $user = $model->getTeacher((int)$value->id_users, $search);
                             $users[] = $user;
                         }
-                         $users =$model->removeDuplicates($users);
+                        $users = $model->removeDuplicates($users);
                         $data['users'] = $users;
                         break;
 
@@ -355,8 +355,37 @@ class Admin extends BaseController
         if (!$this->isAdminConnect()) {
             return redirect()->to(base_url() . "/login");
         }
-        $model = new LivresModel;
-        $data['livres'] = $model->getAll();
+
+        if (!empty($_GET)) {
+            $cat = (int)$_GET['cat'];
+            $search = $_GET['search'];
+            $model = new LivresModel;
+            switch ($cat) {
+                case 0:
+                    $data['livres'] = $model->getAll();
+
+                    break;
+
+                default:
+
+                    $result = $model->getLivreLike2($search, $cat);
+                    //  $this->d($result);
+                    $livre = [];
+                    foreach ($result as $value) {
+                        $livre = $model->getOne((int)$value->id_livre);
+                        $livres[] = $livre;
+                    }
+                    //   $this->d($livre);
+                    $livres = $model->removeDuplicates($livre);
+                    $d[] = $livre;
+                    $data['livres'] = $d;
+                    break;
+            }
+        } else {
+            $model = new LivresModel;
+            $data['livres'] = $model->getAll();
+        }
+
         $data['navLinkActive'] = 'books';
         return $this->render('books', $data, 'Admin/', 'templates/headerAdmin', "templates/footerAdmin");
     }

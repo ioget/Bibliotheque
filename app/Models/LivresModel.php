@@ -40,6 +40,30 @@ class LivresModel extends Model
         }
     }
 
+    public function  getOne($id)
+    {
+        $pdo = $this->getPdo();
+        try{
+            $stmt = $pdo->prepare("SELECT * FROM `livre` WHERE id_livre = :id ");
+            $stmt->execute(['id' => $id]);
+            $livre =[];
+            while($obj = $stmt->fetch(PDO::FETCH_ASSOC))
+            {
+               $obj['categorie'] = $this->getCatName($obj['id_categorie']);
+               $obj['available'] = (int)$obj['nb_exemplaire'] - (int)$this->getAvailaible($obj['id_livre']);
+               $livre[] = $obj; 
+            }
+            if(!empty($livre))
+            {
+                return $livre[0];
+            }else{
+                return [];
+            }
+        }catch(\PDOException $e){
+            die($e->getMessage(). (int)$e->getCode());
+        }
+    }
+
 
     public function  getCatName(int $cat)
     {
@@ -110,4 +134,19 @@ class LivresModel extends Model
         }
     }
 
+    public function removeDuplicates($array) {
+        $result = array_unique($array, SORT_REGULAR);
+        return $result;
+    }
+        
+    public function getLivreLike2($nom,$cat) {
+        $db = \Config\Database::connect();
+        $builder = $db->table('categorie');
+        $builder->select('*');
+        $builder->join('livre', 'categorie.id_categorie = livre.id_categorie');
+        $builder->where('livre.id_categorie' , $cat);
+        $builder->like('livre.nom', $nom);
+        $query = $builder->get();
+        return $query->getResult();
+    }
 }
