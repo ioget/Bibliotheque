@@ -31,27 +31,35 @@ $routes->set404Override();
  */
 
 // We get a performance increase by specifying the default
-// route since we don't have to scan directories.  news/
-$routes->get('/', 'Home::index'); //  
+// route since we don't have to scan directories.  news/   putReturn
+$routes->get('/', 'Home::index'); //   
 
-//$routes->post('/api/registrationpermonth', 'ApiController::RegistrationPerMonth');
+//$routes->post('/api/registrationpermonth', 'ApiController::RegistrationPerMonth'); getCsrf /get/user
 
 $routes->get('/api/data', 'ApiController::data');
-
+$routes->post('/api/create/book', 'Admin::CreateBook');
+$routes->post('/search/book', 'Admin::getBook');
+$routes->get('/api/get/csrf', 'ApiController::getCsrf');
+$routes->post('/api/get/users', 'ApiController::getUser');
+$routes->post('/api/get/book', 'ApiController::getBook');
+$routes->get('/api/user/borrow', 'ApiController::borrow');
+$routes->get('/put/borrow', 'Admin::putBorrow/$p1/$p2/$p3');
+$routes->get('/put/return', 'Admin::putReturn/$p1/$p2/$p3');
 /*
-$routes->group('api', function($routes){
+$routes->group('api', function($routes){ search/book
      $routes->group('stats',function($routes){
             $routes->get("registed", "ApiController::RegistrationPerMonth");
      });
 });
 
 */
-$routes->match(['get', 'post'],'/dashboard', 'Admin::index');
-$routes->get('/dash', 'Admin::dashboard'); 
-$routes->get('/dash/books/', 'Admin::books'); 
-$routes->get('/dash/logout', 'Admin::logout'); 
-$routes->get('/dash/admin', 'Admin::admin');
-$routes->get('/dash/members/(:alpha)', 'Admin::members/$1');
+$routes->match(['get', 'post'],'/login', 'Admin::login');
+$routes->get('/dashboard', 'Admin::dashboard'); 
+$routes->get('/dashboard/books/', 'Admin::books'); 
+$routes->get('/dashboard/librarian/', 'Admin::caisse'); 
+$routes->get('/dashboard/logout', 'Admin::logout'); 
+$routes->get('/dashboard/admin', 'Admin::admin');
+$routes->get('/dashboard/members/(:alpha)', 'Admin::members/$1');
 $routes->match(['get', 'post'],'/teachers/registed', 'Users::teachersRegisted');
 $routes->match(['get', 'post'],'/students/registed', 'Users::studentsRegisted');
 $routes->get('(:segment)', [Pages::class, 'index']);

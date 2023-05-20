@@ -16,9 +16,9 @@
         <span class="  ">Service</span>
         <ul class="flex  flex-col   justify-around">
             <li><a href="/home">Borrow book</a></li>
-            <li><a href="/about">About us</a></li>
-            <li><a href="">Consult</a></li>
-            <li><a href="mailto:mamakemrosly@gmail.com">Support</a></li>
+            <li><a href="/about">See available</a></li>
+            <li><a href="">Manage system</a></li>
+            
         </ul>
     </nav>
 

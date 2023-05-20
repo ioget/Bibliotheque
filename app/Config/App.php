@@ -41,6 +41,8 @@ class App extends BaseConfig
      */
     public array $allowedHostnames = [];
 
+    
+
     /**
      * --------------------------------------------------------------------------
      * Index File

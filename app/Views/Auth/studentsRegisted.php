@@ -6,7 +6,7 @@
 
         <section class=" md:flex md:flex-row flex  w-full h-full    justify-end items-start gap-y-8 -z-10 bg-transparent">
 
-            <form id="form" action="/students/registed" method="post" class=" w-full  bg-gray-50  p-16 pt-2   flex flex-col rounded-lg gap-y-4  shadow-xl  opacity-100  ">
+            <form id="form" action="/students/registed#form" method="post" class=" w-full  bg-gray-50  p-16 pt-2   flex flex-col rounded-lg gap-y-4  shadow-xl  opacity-100  ">
 
                 <?= csrf_field()  ?>
 

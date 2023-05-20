@@ -80,13 +80,21 @@ abstract class BaseController extends Controller
         die();
     }
 
+    public function ve($v)
+    {
+        echo "<pre>";
+        var_export($v);
+        echo "</pre>";
+    }
+
     public function isUsersConnect()
     {
        return  isset($_SESSION['user']) ? true : false;
     }
 
-    public function isAdminConnect()
+    public function isAdminConnect() : bool
     {
+        $session = \Config\Services::session();
         return  isset($_SESSION['admin']) ? true : false;
     }
 

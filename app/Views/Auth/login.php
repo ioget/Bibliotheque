@@ -13,7 +13,7 @@ mail($to,$subject,$txt,$headers); */
 
 <main class="   md:p-0  h-[70vh]  bg-no-repeat  ">
     <section class=" md:flex md:flex-row flex flex-col-reverse w-full h-full  px-8  justify-center items-center gap-y-8 -z-10 bg-transparent" style="background-image: url('/assets/img/download6.svg'); background-repeat:no-repeat;  ">
-        <form id="form" action="/dashboard" method="post" class=" z-20  bg-gray-50 p-12 pt-2   flex flex-col rounded-lg gap-y-4  shadow-2xl  opacity-100  ">
+        <form id="form" action="/login" method="post" class=" z-20  bg-gray-50 p-12 pt-2   flex flex-col rounded-lg gap-y-4  shadow-2xl  opacity-100  ">
 
             <?= csrf_field()  ?>
 
@@ -27,6 +27,12 @@ mail($to,$subject,$txt,$headers); */
             <?php if (isset($data['authentification-errors'])) : ?>
                 <div class="flex justify-center  text-sm w-full h-full bg-red-400  text-white p-2 ">
                     <?= $data['authentification-errors'] ?>
+                </div>
+            <?php endif ?>
+
+            <?php if (isset($data['authentification-succes'])) : ?>
+                <div class="flex justify-center  text-sm w-full h-full bg-green-400  text-white p-2 ">
+                    <?= $data['authentification-succes'] ?>
                 </div>
             <?php endif ?>
 

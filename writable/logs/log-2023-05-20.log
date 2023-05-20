@@ -1,0 +1,24 @@
+CRITICAL - 2023-05-20 08:13:25 --> Call to undefined method App\Models\PrendreModel::getPrendreUsersLike
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\Admin.php(187): CodeIgniter\Model->__call('getPrendreUsersLike', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->members('Students')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-20 08:24:23 --> Call to undefined method App\Models\UsersModel::getPrendreUsersNoBack
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\Admin.php(199): CodeIgniter\Model->__call('getPrendreUsersNoBack', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->members('Students')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-20 08:24:52 --> Call to undefined method App\Models\UsersModel::getPrendreUsersNoBack
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\Admin.php(199): CodeIgniter\Model->__call('getPrendreUsersNoBack', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->members('Students')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

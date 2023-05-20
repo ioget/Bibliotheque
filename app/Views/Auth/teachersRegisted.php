@@ -9,7 +9,7 @@
 
         <section class=" md:flex md:flex-row flex  w-full h-full    justify-end items-start gap-y-8 -z-10 bg-transparent">
 
-            <form id="form" action="/teachers/registed" method="post" class=" w-full  bg-gray-50  p-16 pt-2   flex flex-col rounded-lg gap-y-4  shadow-xl  opacity-100  ">
+            <form id="form" action="/teachers/registed#form" method="post" class=" w-full  bg-gray-50  p-16 pt-2   flex flex-col rounded-lg gap-y-4  shadow-xl  opacity-100  ">
 
                 <?= csrf_field()  ?>
 
@@ -21,6 +21,12 @@
                 <?php if (isset($data['authentification-errors'])) : ?>
                     <div class="flex justify-center  text-sm w-full h-full bg-red-400  text-white p-2 ">
                         <?= $data['authentification-errors'] ?>
+                    </div>
+                <?php endif ?>
+
+                <?php if (isset($data['authentification-succes'])) : ?>
+                    <div class="flex justify-center  text-sm w-full h-full bg-green-400  text-white p-2 ">
+                        <?= $data['authentification-succes'] ?>
                     </div>
                 <?php endif ?>
 

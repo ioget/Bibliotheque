@@ -139,21 +139,21 @@ text-[#36A2EB]
                 </div>
 
                 <div>
-                    <a href="/dash" class="flex pl-2  justify-start items-center gap-x-3">
+                    <a href="/dashboard" class="flex pl-2  justify-start items-center gap-x-3">
                         <img src="/assets/img/icons/desktop-outline.svg" class="w-[25px] h-[25px]  hover:scale-105  " alt="" srcset="">
                         <span class="  hover:text-[#36A2EB] hover:font-bold <?= $data['navLinkActive'] === "home" ? " text-[#36A2EB]" : "" ?>">Dashboard</span>
                     </a>
                 </div>
 
                 <div>
-                    <a href="" class="flex  pl-2 justify-start items-center gap-x-3">
+                    <a href="/dashboard/librarian" class="flex  pl-2 justify-start items-center gap-x-3">
                         <img src="/assets/img/caisse2.svg" class="w-[25px] h-[25px]  hover:scale-105  " alt="" srcset="">
-                        <span class=" hover:text-[#36A2EB] hover:font-bold  <?= $data['navLinkActive'] === "caisse" ? " text-[#36A2EB]" : "" ?>">Librarian</span>
+                        <span class=" hover:text-[#36A2EB] hover:font-bold  <?= $data['navLinkActive'] === "sell" ? " text-[#36A2EB]" : "" ?>">Librarian</span>
                     </a>
                 </div>
 
                 <div>
-                    <div href="/dash/members" class="flex flex-col pl-2 gap-y-2  gap-x-3">
+                    <div href="/dashboard/members" class="flex flex-col pl-2 gap-y-2  gap-x-3">
                         <div class="flex dropMenu gap-x-3">
                              <img src="/assets/img/icons/people-circle-outline.svg" class="w-[28px] h-[28px]  hover:scale-105  " alt="" srcset="">
                              <span class=" hover:text-[#36A2EB] hover:font-bold  <?= str_contains($data['navLinkActive'],"members") ? " text-[#36A2EB]" : "" ?>">Members</span>
@@ -161,11 +161,11 @@ text-[#36A2EB]
                         <div  class="w-full  gap-y-3 overflow-hidden flex flex-col ml-12 ">
                            <div class=" flex gap-x-3  ">
                              <img src="/assets/img/student.svg" class="w-[20px] h-[20px]  hover:scale-105  " alt="" srcset="">
-                             <a href="/dash/members/students">  <span class=" hover:text-[#36A2EB] ">Students</span> </a>
+                             <a href="/dashboard/members/students">  <span class=" hover:text-[#36A2EB] ">Students</span> </a>
                            </div>
                            <div class=" flex gap-x-3 ">
                              <img src="/assets/img/teacher.svg" class="w-[22] h-[22px]  hover:scale-105  " alt="" srcset="">
-                             <a href="/dash/members/teachers"> <span class=" hover:text-[#36A2EB]  ">Teachers</span> </a>
+                             <a href="/dashboard/members/teachers"> <span class=" hover:text-[#36A2EB]  ">Teachers</span> </a>
                            </div>
                         </div>
                     </div>
@@ -174,14 +174,14 @@ text-[#36A2EB]
 
 
                 <div>
-                    <a href="/dash/books/" class="flex  pl-2 justify-start items-center gap-x-3">
+                    <a href="/dashboard/books/" class="flex  pl-2 justify-start items-center gap-x-3">
                         <img src="/assets/img/books.svg" class="w-[25px] h-[25px]  hover:scale-105  " alt="" srcset="">
                         <span class=" hover:text-[#36A2EB] hover:font-bold  <?= $data['navLinkActive'] === "books" ? " text-[#36A2EB]" : "" ?>">Books</span>
                     </a>
                 </div>
 
                 <div>
-                    <a href="/dash/admin" class="flex pl-2 justify-start items-center gap-x-3">
+                    <a href="/dashboard/admin" class="flex pl-2 justify-start items-center gap-x-3">
                         <img src="/assets/img/admin.svg" class="w-[25px] h-[25px]  hover:scale-105  " alt="" srcset="">
                         <span class=" hover:text-[#36A2EB] hover:font-bold  <?= $data['navLinkActive'] === "admin" ? " text-[#36A2EB]" : "" ?>">Admin</span>
                     </a>
@@ -195,7 +195,7 @@ text-[#36A2EB]
                 </div>
 
                 <div>
-                    <a href="/dash/logout" class="flex pl-2 justify-start  items-start gap-x-3">
+                    <a href="/dashboard/logout" class="flex pl-2 justify-start  items-start gap-x-3">
                         <img src="/assets/img/icons/log-out-outline.svg" class="w-[25px] h-[25px]  hover:scale-105  " alt="" srcset="">
                         <span class="  hover:text-[#36A2EB] hover:font-bold whitespace-nowrap   ">Log out</span>
                     </a>

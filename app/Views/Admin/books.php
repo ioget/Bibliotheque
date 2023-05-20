@@ -1,9 +1,9 @@
 <section class="content flex flex-col   gap-y-5  p-5">
 
     <div class="navlink text-2xl flex ">
-    <div class="hover:bg-gray-100 rounded-lg">
-        <img src="/assets/img/icons/home-outline.svg" width="28" class="   p-1" alt=""> 
-       </div>
+        <div class="hover:bg-gray-100 rounded-lg">
+            <img src="/assets/img/icons/home-outline.svg" width="28" class="   p-1" alt="">
+        </div>
         Dashboard / <?= ucfirst($data['navLinkActive']) ?>
         <img src="/assets/img/icons/chevron-forward-outline.svg" width="15" class=" scale-125 relative top-[2px]  rounded-r-full " alt="">
     </div>
@@ -11,42 +11,42 @@
 
     <div class="relative bg-white border  rounded-xl shadow-xl p-2 overflow-x-auto overflow-y-hidden flex flex-col gap-y-3  sm:rounded-lg">
 
-
-        <form class="flex  gap-x-6   justify-end items-end  ">
-
+        <form class="flex js-user gap-x-6   justify-end items-end  ">
 
             <div class="w-full flex gap-x-16   items-end">
 
+           
                 <div class="w-[25%]">
                     <select id="large" class="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-lg bg-neutral-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                        <option value="all" selected>All category</option>
-                        <option value="Philosophie">Philosophie</option>
-                        <option value="Histoire">Histoire</option>
-                        <option value="Littérature classique">Littérature classique</option>
-                        <option value="Poésie">Poésie</option>
-                        <option value="Théâtre">Théâtre</option>
-                        <option value="Sciences sociales">Sciences sociales</option>
-                        <option value="Sciences politiques">Sciences politiques</option>
-                        <option value="Sciences économiques">Sciences économiques</option>
-                        <option value="Sciences">Sciences</option>
-                        <option value="Médecine">Médecine</option>
-                        <option value="Psychologie">Psychologie</option>
-                        <option value="Sociologie">Sociologie</option>
-                        <option value="Anthropologie">Anthropologie</option>
-                        <option value="Archéologie">Archéologie</option>
-                        <option value="Arts">Arts</option>
-                        <option value="Musique">Musique</option>
-                        <option value="Éducation">Éducation</option>
-                        <option value="Droit">Droit</option>
-                        <option value="Géographie">Géographie</option>
-                        <option value="Géologie">Géologie</option>
-                        <option value="Biologie">Biologie</option>
-                        <option value="Chimie">Chimie</option>
-                        <option value="Physique">Physique</option>
-                        <option value="Mathématiques">Mathématiques</option>
+                        <option value="0" selected>All category</option>
+                        <option value="1">Others</option>
+                        <option value="2">Philosophie</option>
+                        <option value="3">Histoire</option>
+                        <option value="4">Littérature classique</option>
+                        <option value="5">Poésie</option>
+                        <option value="6">Théâtre</option>
+                        <option value="7">Sciences sociales</option>
+                        <option value="8">Sciences politiques</option>
+                        <option value="9">Sciences économiques</option>
+                        <option value="10">Sciences</option>
+                        <option value="11">Médecine</option>
+                        <option value="12">Psychologie</option>
+                        <option value="13">Sociologie</option>
+                        <option value="14">Anthropologie</option>
+                        <option value="15">Archéologie</option>
+                        <option value="16">Arts</option>
+                        <option value="17">Musique</option>
+                        <option value="18">Éducation</option>
+                        <option value="19">Droit</option>
+                        <option value="20">Géographie</option>
+                        <option value="21">Géologie</option>
+                        <option value="22">Biologie</option>
+                        <option value="23">Chimie</option>
+                        <option value="24">Physique</option>
+                        <option value="25">Mathématiques</option>
+                        <option value="26">Informatique</option>
                     </select>
                 </div>
-
                 <div class="w-full gap-x-2  justify-end flex items-end">
                     <div class="w-full ">
                         <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
@@ -99,23 +99,26 @@
 
                 </tr>
             </thead>
+
             <tbody>
+
+            <?php foreach ($data['livres'] as  $livre ) : ?>
                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700  hover:bg-neutral-50 dark:hover:bg-gray-600">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        Apple MacBook Pro 17"
+                        <?= $livre['nom'] ?>
                     </th>
                     <td class="px-6 py-4">
-                        Silver
+                        <?= $livre['date_publication'] ?>     
                     </td>
                     <td class="px-6 py-4">
-                        Laptop
+                        <?= $livre['nb_exemplaire'] ?>     
                     </td>
 
                     <td class="px-6 py-4">
-                        Informatique
+                        <?= $livre['categorie'] ?>   
                     </td>
                     <td class="px-6 py-4">
-                        3
+                        <?= $livre['available'] ?> 
                     </td>
                     <td class="px-6 py-4 flex gap-x-1 justify-end text-right">
                         <img href="#" data-popover-target="popover" class=" hover:scale-105" width="18" src="/assets/img/icons/eye-outline.svg">
@@ -129,7 +132,7 @@
                                 <h3 class="font-semibold text-gray-900 dark:text-white z-[60]">Others information</h3>
                             </div>
                             <div class="px-3 py-2 z-50   ">
-                                <p class="text-sm z-[60]"> Resume : Lorem ipsum dolor, adipisicing elit. Culpa perferendis voluptas accusantium voluptate aut vel, assumenda eligendi iusto cum quas debitis sapiente esse neque velit qui quod aliquid quaerat repellendus..</p>
+                                <p class="text-sm z-[60]"> Resume : <?= $livre['resume'] ?></p>
 
                             </div>
                             <div data-popper-arrow></div>
@@ -137,130 +140,7 @@
                     </td>
 
                 </tr>
-
-
-
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700  hover:bg-neutral-50 dark:hover:bg-gray-600">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        Apple MacBook Pro 17"
-                    </th>
-                    <td class="px-6 py-4">
-                        Silver
-                    </td>
-                    <td class="px-6 py-4">
-                        Laptop
-                    </td>
-
-                    <td class="px-6 py-4">
-                        Informatique
-                    </td>
-                    <td class="px-6 py-4">
-                        3
-                    </td>
-                    <td class="px-6 py-4 flex gap-x-1 justify-end text-right">
-                        <img href="#" data-popover-target="popover" class=" hover:scale-105" width="18" src="/assets/img/icons/eye-outline.svg">
-                        <span class="  w-1 h-5 bg-neutral-200  rounded-md "></span>
-                        <img src="/assets/img/edit.svg" class=" hover:scale-105" width="18" alt="" srcset="">
-                        <span class=" w-1 h-5 bg-neutral-200  rounded-md "></span>
-                        <img src="/assets/img/icons/trash-outline.svg" class=" hover:scale-105" data-modal-target="popup-modal" data-modal-toggle="popup-modal" width="18" alt="" srcset="">
-
-                        <div data-popover id="popover" role="tooltip" class="absolute z-[60] invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
-                            <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 z-[60] rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
-                                <h3 class="font-semibold text-gray-900 dark:text-white z-[60]">Others information</h3>
-                            </div>
-                            <div class="px-3 py-2 z-50   ">
-                                <p class="text-sm z-[60]"> Resume : Lorem ipsum dolor, adipisicing elit. Culpa perferendis voluptas accusantium voluptate aut vel, assumenda eligendi iusto cum quas debitis sapiente esse neque velit qui quod aliquid quaerat repellendus..</p>
-
-                            </div>
-                            <div data-popper-arrow></div>
-                        </div>
-                    </td>
-
-                </tr>
-
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700  hover:bg-neutral-50 dark:hover:bg-gray-600">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        Apple MacBook Pro 17"
-                    </th>
-                    <td class="px-6 py-4">
-                        Silver
-                    </td>
-                    <td class="px-6 py-4">
-                        Laptop
-                    </td>
-
-                    <td class="px-6 py-4">
-                        Informatique
-                    </td>
-                    <td class="px-6 py-4">
-                        3
-                    </td>
-                    <td class="px-6 py-4 flex gap-x-1 justify-end text-right">
-                        <img href="#" data-popover-target="popover" class=" hover:scale-105" width="18" src="/assets/img/icons/eye-outline.svg">
-                        <span class="  w-1 h-5 bg-neutral-200  rounded-md "></span>
-                        <img src="/assets/img/edit.svg" class=" hover:scale-105" width="18" alt="" srcset="">
-                        <span class=" w-1 h-5 bg-neutral-200  rounded-md "></span>
-                        <img src="/assets/img/icons/trash-outline.svg" class=" hover:scale-105" data-modal-target="popup-modal" data-modal-toggle="popup-modal" width="18" alt="" srcset="">
-
-                        <div data-popover id="popover" role="tooltip" class="absolute z-[60] invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
-                            <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 z-[60] rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
-                                <h3 class="font-semibold text-gray-900 dark:text-white z-[60]">Others information</h3>
-                            </div>
-                            <div class="px-3 py-2 z-50   ">
-                                <p class="text-sm z-[60]"> Resume : Lorem ipsum dolor, adipisicing elit. Culpa perferendis voluptas accusantium voluptate aut vel, assumenda eligendi iusto cum quas debitis sapiente esse neque velit qui quod aliquid quaerat repellendus..</p>
-
-                            </div>
-                            <div data-popper-arrow></div>
-                        </div>
-                    </td>
-
-                </tr>
-
-
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700  hover:bg-neutral-50 dark:hover:bg-gray-600">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        Apple MacBook Pro 17"
-                    </th>
-                    <td class="px-6 py-4">
-                        Silver
-                    </td>
-                    <td class="px-6 py-4">
-                        Laptop
-                    </td>
-
-                    <td class="px-6 py-4">
-                        Informatique
-                    </td>
-                    <td class="px-6 py-4">
-                        3
-                    </td>
-                    <td class="px-6 py-4 flex gap-x-1 justify-end text-right">
-                        <img href="#" data-popover-target="popover" class=" hover:scale-105" width="18" src="/assets/img/icons/eye-outline.svg">
-                        <span class="  w-1 h-5 bg-neutral-200  rounded-md "></span>
-                        <img src="/assets/img/edit.svg" class=" hover:scale-105" width="18" alt="" srcset="">
-                        <span class=" w-1 h-5 bg-neutral-200  rounded-md "></span>
-                        <img src="/assets/img/icons/trash-outline.svg" class=" hover:scale-105" data-modal-target="popup-modal" data-modal-toggle="popup-modal" width="18" alt="" srcset="">
-
-                        <div data-popover id="popover" role="tooltip" class="absolute z-[60] invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
-                            <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 z-[60] rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
-                                <h3 class="font-semibold text-gray-900 dark:text-white z-[60]">Others information</h3>
-                            </div>
-                            <div class="px-3 py-2 z-50   ">
-                                <p class="text-sm z-[60]"> Resume : Lorem ipsum dolor, adipisicing elit. Culpa perferendis voluptas accusantium voluptate aut vel, assumenda eligendi iusto cum quas debitis sapiente esse neque velit qui quod aliquid quaerat repellendus..</p>
-
-                            </div>
-                            <div data-popper-arrow></div>
-                        </div>
-                    </td>
-
-                </tr>
-
-
-
-
-
-
-
+             <?php endforeach ?>
             </tbody>
 
 
@@ -321,9 +201,10 @@
                         <p> Create book </p>
                         <img src="/assets/img/icons/book-outline.svg" width="25" alt="">
                     </h3>
-                    <form class="space-y-6" action="#">
-
-
+                    
+                    <form class="space-y-6 MyFormCreateBook" method="POST" action="/api/create/book" >
+                    <input type="hidden" id="csrf_test_name" class="txt_csrfname" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>" />
+                    
                         <!-- id_livre	nom  	resume	date_publication langue	nb_exemplaire	id_categorie -->
                         <div>
                             <label for="Book name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> Book name</label>
@@ -341,8 +222,13 @@
                         </div>
 
                         <div>
+                            <label for="auteur" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> Auteur</label>
+                            <input type="text" name="auteur" id="auteur" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                        </div>
+
+                        <div>
                             <label for="langue" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Language</label>
-                            <select id="langue" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <select id="langue"  name='langue' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <?php
                                 $jsonFile = APPPATH . '../public/assets/js/language.json';
                                 $json = file_get_contents($jsonFile);
@@ -359,33 +245,33 @@
 
                         <div>
                             <label for="categorie" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Genre</label>
-                            <select id="categorie" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option value="others">Others</option>
-                                <option value="Philosophie">Philosophie</option>
-                                <option value="Histoire">Histoire</option>
-                                <option value="Littérature classique">Littérature classique</option>
-                                <option value="Poésie">Poésie</option>
-                                <option value="Théâtre">Théâtre</option>
-                                <option value="Sciences sociales">Sciences sociales</option>
-                                <option value="Sciences politiques">Sciences politiques</option>
-                                <option value="Sciences économiques">Sciences économiques</option>
-                                <option value="Sciences">Sciences</option>
-                                <option value="Médecine">Médecine</option>
-                                <option value="Psychologie">Psychologie</option>
-                                <option value="Sociologie">Sociologie</option>
-                                <option value="Anthropologie">Anthropologie</option>
-                                <option value="Archéologie">Archéologie</option>
-                                <option value="Arts">Arts</option>
-                                <option value="Musique">Musique</option>
-                                <option value="Éducation">Éducation</option>
-                                <option value="Droit">Droit</option>
-                                <option value="Géographie">Géographie</option>
-                                <option value="Géologie">Géologie</option>
-                                <option value="Biologie">Biologie</option>
-                                <option value="Chimie">Chimie</option>
-                                <option value="Physique">Physique</option>
-                                <option value="Mathématiques">Mathématiques</option>
-                                <option value="Informatique">Informatique</option>
+                            <select id="categorie" name="categorie" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option value="1">Others</option>
+                                <option value="2">Philosophie</option>
+                                <option value="3">Histoire</option>
+                                <option value="4">Littérature classique</option>
+                                <option value="5">Poésie</option>
+                                <option value="6">Théâtre</option>
+                                <option value="7">Sciences sociales</option>
+                                <option value="8">Sciences politiques</option>
+                                <option value="9">Sciences économiques</option>
+                                <option value="10">Sciences</option>
+                                <option value="11">Médecine</option>
+                                <option value="12">Psychologie</option>
+                                <option value="13">Sociologie</option>
+                                <option value="14">Anthropologie</option>
+                                <option value="15">Archéologie</option>
+                                <option value="16">Arts</option>
+                                <option value="17">Musique</option>
+                                <option value="18">Éducation</option>
+                                <option value="19">Droit</option>
+                                <option value="20">Géographie</option>
+                                <option value="21">Géologie</option>
+                                <option value="22">Biologie</option>
+                                <option value="23">Chimie</option>
+                                <option value="24">Physique</option>
+                                <option value="25">Mathématiques</option>
+                                <option value="26">Informatique</option>
                             </select>
                         </div>
 
@@ -393,7 +279,7 @@
                             <label for="resume" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Summary</label>
                             <textarea id="resume" rows="4" name="resume" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write summary here..."></textarea>
                         </div>
-                        <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Create</button>
+                        <button type="submit" class="w-full js-Create-book text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Create</button>
                     </form>
                 </div>
             </div>
