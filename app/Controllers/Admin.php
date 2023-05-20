@@ -330,23 +330,41 @@ class Admin extends BaseController
         $request = \Config\Services::request();
         $csrf_test_name = $request->getGet('csrf_test_name');
         $id_u = (int)$request->getGet('id');
-        var_dump($id_u);
+     //   var_dump($id_u);
         $id_livre = (int)$request->getGet('id_livre');
         $session = \Config\Services::session();
         $idAdmin = (int) $_SESSION['admin']['id_admin'];
         $model = new PrendreModel();
         $date = new \DateTime();
-        $now = $date->format('Y-m-d') . " 00:00:00";
+        $now = $date->format('Y-m-d');
         $date->modify('+2 weeks');
         $jour = $date->format('Y-m-d') . " 00:00:00";
         $db = \Config\Database::connect();
 
-        $db->table('prendre')->where('id_livre', $id_livre)->where('id_users', $id_u)->delete(['date_return' => $now]);
 
+        $query = $db->table('prendre')->where('id_livre', $id_livre)->where('id_users', $id_u)->get();
+        $u= $query->getResult()[0];
 
+        $d =  $this->compareDates($now,$u->date_expected_return);
+        if($d)
+        {
 
+            $q = $db->table('users')->where('id_users', $id_u)->get();
+            $user = $q->getResult()[0];
+            $point =(int) $user->point - 3;
+            $db->table('users')->where('id_users',$id_u)->update(['point', $point]);
+        }
+        //var_dump($d);
+        $db->table('prendre')->where('id_livre', $id_livre)->where('id_users', $id_u)->delete();
         return redirect()->to(base_url() . "/dashboard/librarian");
     }
+  
+    public function compareDates($date1, $date2) {
+        $timestamp1 = strtotime($date1);
+        $timestamp2 = strtotime($date2);
+        return $timestamp1 > $timestamp2;
+    }
+    
 
     public function books()
     {
@@ -377,7 +395,13 @@ class Admin extends BaseController
                     }
                     //   $this->d($livre);
                     $livres = $model->removeDuplicates($livre);
-                    $d[] = $livre;
+                    if(!empty($livre))
+                    {
+                        $d[] = $livre;
+                    }else{
+                        $d = [];
+                    }
+                  
                     $data['livres'] = $d;
                     break;
             }

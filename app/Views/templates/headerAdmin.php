@@ -187,12 +187,7 @@ text-[#36A2EB]
                     </a>
                 </div>
 
-                <div>
-                    <a href="" class="flex pl-2 justify-start items-center gap-x-3">
-                        <img src="/assets/img/icons/notifications-circle-outline.svg" class="w-[25px] h-[25px]  hover:scale-105  " alt="" srcset="">
-                        <span class=" hover:text-[#36A2EB] hover:font-bold  ">Notification</span>
-                    </a>
-                </div>
+        
 
                 <div>
                     <a href="/dashboard/logout" class="flex pl-2 justify-start  items-start gap-x-3">
