@@ -331,7 +331,7 @@ class Admin extends BaseController
     public function putReturn()
     {
         # code...
-        var_dump($_GET);
+     //   var_dump($_GET);
         $request = \Config\Services::request();
         $csrf_test_name = $request->getGet('csrf_test_name');
         $id_u = (int)$request->getGet('id');
