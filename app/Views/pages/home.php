@@ -1,5 +1,6 @@
 
 
+
  <main class="flex flex-col justify-between ">
     <div class="flex flex-col p-12 items-center">
         <div class="font-bold text-6xl">
@@ -14,3 +15,4 @@
             <img src="/assets/img/bi.jpg" alt="" class=" w-full object-cover" srcset="">
     </div>
  </main>
+

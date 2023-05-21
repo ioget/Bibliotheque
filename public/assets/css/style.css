@@ -41,12 +41,24 @@ main
     margin-right: 40px;
 }
 
+<<<<<<< HEAD
 .view
 {
     background: rgb(150,132,244);background: linear-gradient(90deg, rgba(150,132,244,1) 0%, rgba(134,170,244,1) 31%, rgba(163,227,227,1) 100%);
 }
 
 
+=======
+.logoCenter{
+    background-image: none;
+    display: inline-block;
+}
+
+p{
+    text-align: center;
+    background-color: black;
+}
+>>>>>>> 4235b71f89d81b46b0e0d7624a8cd64dd5d6a9a6
 
 
 
