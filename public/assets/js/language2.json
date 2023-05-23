@@ -1,8 +1,0 @@
-{
-    "Fiction": [    "Science-fiction",    "Fantasy",    "Horreur",    "Mystère",    "Romance",    "Historique",    "Contemporain"  ],
-    "Non-fiction": [    "Biographie",    "Autobiographie",    "Essai",    "Histoire",    "Politique",    "Religion",    "Santé",    "Science",    "Technologie",    "Voyages"  ],
-    "Jeunesse": [    "Album",    "Conte",    "Bande dessinée",    "Roman jeunesse",    "Documentaire jeunesse"  ],
-    "Poésie": [    "Lyrisme",    "Engagée",    "Blanche",    "Noire",    "Épique",    "Surréaliste",    "Haïku"  ],
-    "Théâtre": [    "Tragédie",    "Comédie",    "Drame",    "Opéra"  ]
-  }
-  
