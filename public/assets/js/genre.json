@@ -1,0 +1,44 @@
+{
+  "fiction": {
+    "subgenres": {
+      "romance": null,
+      "mystery": null,
+      "science fiction": null,
+      "thriller/suspense": null,
+      "historical fiction": null,
+      "literary fiction": null,
+      "young adult": null,
+      "children's literature": null,
+      "fantasy": {
+        "subgenres": {
+          "urban fantasy": null,
+          "epic/high fantasy": null,
+          "magical realism": null
+        }
+      }
+    }
+  },
+  "non-fiction": {
+    "subgenres": {
+      "biography": null,
+      "self-help": null,
+      "history": null,
+      "science": {
+        "subgenres": {
+          "biology": null,
+          "chemistry": null,
+          "physics": null,
+          "astronomy": null
+        }
+      },
+      "business": null,
+      "politics": null,
+      "memoir": null,
+      "true crime": null,
+      "travel": null
+    }
+  },
+  "poetry": null,
+  "drama": null,
+  "comics/graphic novels": null
+}
